@@ -10,6 +10,21 @@
   <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
+
+<!-- ================= MODALE HERO ================= -->
+<div class="contact-modal" id="contact-modal">
+  <div class="contact-modal-content">
+    <button class="modal-close" id="close-contact-modal">×</button>
+    <h3>Choisir une concession</h3>
+    <p>Quelle concession souhaitez-vous contacter ?</p>
+    <div class="modal-actions">
+      <a href="tel:0490133000" class="modal-btn">Appeler Avignon</a>
+      <a href="tel:0490911271" class="modal-btn">Appeler Tarascon</a>
+    </div>
+  </div>
+</div>
+
+
   <!-- HEADER -->
   <header>
     <div class="logo">
@@ -28,20 +43,19 @@
   </header>
 
   <main>
+    
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-bg"></div>
+      <div class="hero-bg-citroen"></div>
       <div class="hero-inner">
         <div class="hero-content">
-          <h1 class="typewriter-h1">Votre expérience après-vente :</h1>
-          <h2 class="typewriter-h2">Citroën · DS Automobiles · Spoticar</h2>
-          <p class="lead">
-            Accédez à vos informations essentielles, conseils d’entretien, services atelier et coordonnées directes pour les Concessions d'Avignon et de Tarascon.
-          </p>
+          <h1 class="typewriter-h1">Votre espace client Citroën</h1>
+          <h2 class="typewriter-h2">Toutes les informations essentielles pour votre véhicule, au même endroit</h2>
+          <a href="#contact" id="open-contact-modal" class="btn-cta-call">Nous contacter</a>
         </div>
       </div>
     </section>
-    </main>
+
 
     <section class="citroen-sav-page">
   <div class="container">
@@ -57,38 +71,130 @@
       </p>
     </div>
 
-    <!-- QUI CONTACTER -->
-    <div class="section-content">
+<!-- QUI CONTACTER – CITROËN -->
+<section class="citroen-page-contacts">
+  <div class="citroen-page-contacts-wrapper">
+
+    <div class="citroen-page-contacts-header">
+      <span class="eyebrow">Interlocuteurs dédiés</span>
       <h3>Qui contacter selon votre besoin</h3>
       <p>
-        Afin de vous répondre rapidement et efficacement, nos équipes sont organisées par
-        pôles de compétences. Selon votre situation, un interlocuteur dédié est à votre
-        écoute.
+        Afin de vous répondre rapidement et efficacement, nos équipes sont organisées
+        par pôles de compétences. Un interlocuteur dédié est à votre écoute.
+      </p>
+    </div>
+
+    <div class="citroen-page-contacts-grid">
+
+      <!-- CARTE 1 – TECHNIQUE (clé à molette) -->
+      <div class="citroen-contact-card">
+        <div class="citroen-contact-icon">
+          <!-- Picto clé à molette -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22.7 19.3l-6.2-6.2a6 6 0 0 0-7.9-7.9l3.2 3.2-2.1 2.1-3.2-3.2a6 6 0 0 0 7.9 7.9l6.2 6.2 2.1-2.1Z"/>
+          </svg>
+        </div>
+
+        <h4>Hervé Chardenon</h4>
+        <p class="citroen-contact-role">Metteur en main</p>
+
+        <div class="citroen-contact-infos">
+          <span>Tél. : à renseigner</span>
+          <span>Email : herve.chardenon@citroen-avignon.fr </span>
+        </div>
+      </div>
+
+      <!-- CARTE 2 – QUALITÉ -->
+      <div class="citroen-contact-card">
+        <div class="citroen-contact-icon">
+          <!-- Picto qualité / satisfaction -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.8 6.1 20l1.2-6.5L2.5 8.9l6.6-.9L12 2z"/>
+          </svg>
+        </div>
+
+        <h4>Alice LeChevalier</h4>
+        <p class="citroen-contact-role">Chargée de qualité</p>
+
+        <div class="citroen-contact-infos">
+          <span>Tél. : à renseigner</span>
+          <span>Email : qualite@citroen-avignon.fr </span>
+        </div>
+      </div>
+
+      <!-- CARTE 3 – ACCUEIL (bonhomme) -->
+      <div class="citroen-contact-card">
+        <div class="citroen-contact-icon">
+          <!-- Picto bonhomme -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 12c2.76 0 5-2.24 5-5S14.76 2 12 2 7 4.24 7 7s2.24 5 5 5Zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5Z"/>
+          </svg>
+        </div>
+
+        <h4>Sylvie Solfrini</h4>
+        <p class="citroen-contact-role">Secrétaire de livraison</p>
+
+        <div class="citroen-contact-infos">
+          <span>Tél. : à renseigner</span>
+          <span>Email : sylvie.solfrini@citroen-avignon.fr </span>
+        </div>
+      </div>
+
+      <!-- CARTE 4 – ADMINISTRATIF (bonhomme identique) -->
+      <div class="citroen-contact-card">
+        <div class="citroen-contact-icon">
+          <!-- Picto bonhomme (identique carte 3) -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 12c2.76 0 5-2.24 5-5S14.76 2 12 2 7 4.24 7 7s2.24 5 5 5Zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5Z"/>
+          </svg>
+        </div>
+
+        <h4>Bérénice Bodelle</h4>
+        <p class="citroen-contact-role">Secrétaire de livraison</p>
+
+        <div class="citroen-contact-infos">
+          <span>Tél. : à renseigner</span>
+          <span>Email : berenice.bodelle@citroen-avignon.fr</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- GUIDES D’UTILISATION – CITROËN -->
+<section class="citroen-page-guides">
+  <div class="citroen-page-guides-wrapper">
+
+    <div class="citroen-page-guides-content">
+      <span class="eyebrow">Documentation officielle</span>
+      <h3>Guides d’utilisation de votre véhicule Citroën</h3>
+
+      <p>
+        Pour vous accompagner au quotidien, Citroën met à votre disposition une plateforme
+        officielle regroupant l’ensemble des informations liées à l’utilisation de votre véhicule.
       </p>
 
-      <ul class="contact-list">
-        <li>
-          <strong>Prise de rendez-vous atelier / suivi d’intervention</strong><br>
-          Service Après-Vente – Accueil atelier<br>
-          Téléphone : à renseigner<br>
-          Email : à renseigner
-        </li>
+      <p>
+        Vous y retrouverez les notices d’utilisation, les explications détaillées des équipements,
+        ainsi que des conseils pratiques pour l’entretien, la sécurité et les fonctionnalités
+        spécifiques à votre modèle.
+      </p>
 
-        <li>
-          <strong>Questions techniques / entretien / réparations</strong><br>
-          Chef d’atelier / Conseiller service<br>
-          Téléphone : à renseigner<br>
-          Email : à renseigner
-        </li>
-
-        <li>
-          <strong>Facturation, garanties, dossiers administratifs</strong><br>
-          Service administratif SAV<br>
-          Téléphone : à renseigner<br>
-          Email : à renseigner
-        </li>
-      </ul>
+      <a
+        href="https://service.citroen.com/ACddb/index.html"
+        target="_blank"
+        rel="noopener"
+        class="citroen-page-btn"
+      >
+        Accéder aux guides officiels Citroën
+      </a>
     </div>
+
+  </div>
+</section>
+
 
     <!-- ASSISTANCE CITROËN -->
     <div class="section-content">
@@ -101,7 +207,7 @@
 
       <p class="assistance-number">
         <strong>Numéro d’assistance Citroën :</strong><br>
-        <a href="tel:0800052424" class="btn-service">Assistance Citroën</a>
+        <a href="tel:0800052424" class="citroen-page-btn">Assistance Citroën</a>
       </p>
 
       <p class="assistance-note">
@@ -109,282 +215,286 @@
       </p>
     </div>
 
-<!-- ================= SERVICES CITROËN – PAGE DÉDIÉE ================= -->
 
-<section class="citroen-page-services">
-  <div class="citroen-page-services-header">
-    <span class="citroen-page-eyebrow">Découvrez notre savoir-faire</span>
+<!-- ================= SERVICES CITROËN ================= -->
+
+<section class="citroen-services">
+  <div class="citroen-services-inner">
+    <span class="citroen-eyebrow">Découvrez notre savoir-faire</span>
     <h2>Nos services Citroën</h2>
   </div>
 </section>
 
-<!-- ===== ATELIER ===== -->
-<section class="citroen-page-service">
-  <div class="citroen-page-service-wrapper">
-    
-    <div class="citroen-page-service-content">
-      <h2>Atelier</h2>
-      <h3>Entretien & réparations</h3>
+<!-- ================= ATELIER ================= -->
 
+<section class="citroen-service-section" id="citroen-atelier">
+  <div class="citroen-service-content">
+    <div class="citroen-service-text">
+      <h2>Atelier</h2><h3> Entretien & Réparations</h3><br>
       <p>
-        Confiez votre Citroën ou DS à nos experts. Nos techniciens assurent
-        l’entretien et les réparations avec soin et réactivité afin de garantir
-        votre sécurité et votre sérénité au quotidien.
+        Confiez votre Citroën à nos experts. Nos techniciens assurent l’entretien
+        et les réparations avec soin et rapidité,
+        pour que vous profitiez pleinement de votre véhicule en toute sécurité.
       </p>
-
       <ul>
-        <li>Expertise constructeur Citroën et DS</li>
+        <li>Expertise 100 % constructeur Citroën </li>
         <li>Forfaits clairs et transparents</li>
         <li>Rendez-vous rapides pour limiter l’attente</li>
       </ul>
-
-      <a href="#" class="citroen-page-btn" id="citroen-page-atelier">
+      <a href="#" id="open-citroen-choose-concession" class="citroen-btn-service">
         Prendre rendez-vous
       </a>
     </div>
 
-    <div class="citroen-page-service-visual">
+    <div class="citroen-service-image">
       <img src="images/Atelier.svg" alt="Atelier Citroën">
     </div>
-
   </div>
 </section>
 
 <!-- ================= MODALE CHOIX CONCESSION ATELIER ================= -->
-<div class="choose-concession-modal" id="choose-concession-modal" style="display:none;">
-  <div class="choose-concession-content">
-    <button class="modal-close" id="close-choose-concession">×</button>
+
+<div class="citroen-choose-concession-modal" id="citroen-choose-concession-modal" style="display:none;">
+  <div class="citroen-choose-concession-content">
+    <button class="citroen-modal-close" id="close-citroen-choose-concession">×</button>
     <h3>Choisissez votre concession</h3>
     <p>Où souhaitez-vous prendre rendez-vous ?</p>
-    <div class="modal-actions">
-      <a href="tel:0490133000" class="btn-service">Avignon</a>
-      <a href="tel:0490911271" class="btn-service">Tarascon</a>
+    <div class="citroen-modal-actions">
+      <a href="tel:0490133000" class="citroen-btn-service">Avignon</a>
+      <a href="tel:0490911271" class="citroen-btn-service">Tarascon</a>
     </div>
   </div>
 </div>
 
+<!-- ================= PIÈCES ================= -->
 
-<!-- ===== PIÈCES ===== -->
-<section class="citroen-page-service">
-  <div class="citroen-page-service-wrapper is-reverse">
-
-    <div class="citroen-page-service-content">
-      <h2>Pièces de rechange</h2>
-      <h3>Qualité & fiabilité</h3>
-
+<section class="citroen-service-section" id="citroen-pieces">
+  <div class="citroen-service-content reverse">
+    <div class="citroen-service-text">
+      <h2>Pièces de rechange</h2><h3> Qualité & Fiabilité</h3><br>
       <p>
-        Optez pour des pièces d’origine Citroën conçues pour garantir performance,
-        sécurité et longévité. Nos équipes vous accompagnent dans le choix des
-        solutions les plus adaptées à votre véhicule.
+        Offrez à votre voiture la qualité et la fiabilité Citroën.
+        Nos pièces d’origine sont conçues pour garantir sécurité, longévité et performance.
       </p>
-
       <ul>
-        <li>Pièces d’origine garanties constructeur</li>
-        <li>Disponibilité rapide</li>
-        <li>Promotions régulières sur les consommables</li>
+        <li>Qualité et fiabilité garanties</li>
+        <li>Disponibilité rapide pour ne pas immobiliser votre véhicule</li>
+        <li>Promotions régulières sur consommables</li>
         <li>Accessoires pour personnaliser votre véhicule</li>
       </ul>
-
-      <a href="tel:0490133008" class="citroen-page-btn">
+      <a href="tel:0490133008" class="citroen-btn-service">
         Découvrir nos offres
       </a>
     </div>
 
-    <div class="citroen-page-service-visual">
+    <div class="citroen-service-image">
       <img src="images/PR.svg" alt="Pièces Citroën">
     </div>
-
   </div>
 </section>
 
-<!-- ===== FREE2MOVE RENT ===== -->
-<section class="citroen-page-service">
-  <div class="citroen-page-service-wrapper">
+<!-- ================= RENT ================= -->
 
-    <div class="citroen-page-service-content">
-      <h2>Free2Move Rent</h2>
-      <h3>Location simplifiée</h3>
-
+<section class="citroen-service-section" id="citroen-rent">
+  <div class="citroen-service-content">
+    <div class="citroen-service-text">
+      <h2>Free2Move Rent</h2><h3> Location simplifiée </h3><br>
       <p>
-        Louez un véhicule Citroën ou DS en toute simplicité. Une solution idéale
-        pour un besoin ponctuel, un déplacement professionnel ou un week-end.
+        Louez un véhicule Citroën en toute simplicité.
+        Idéal pour remplacer temporairement votre voiture, profiter d’un
+        véhicule plus grand pour un week-end ou tester un modèle récent.
       </p>
-
       <ul>
-        <li>Large choix de véhicules récents</li>
-        <li>Réservation simple en ligne ou en agence</li>
-        <li>Offres dédiées aux clients particuliers</li>
+        <li>Large choix de véhicules particuliers</li>
+        <li>Réservation simple et rapide en ligne ou en agence</li>
+        <li>Tarifs avantageux et offres spéciales pour les clients particuliers</li>
       </ul>
-
-      <a href="tel:0490133796" class="citroen-page-btn" id="citroen-page-rent">
+      <a href="tel:0490133796" id="open-citroen-rent" class="citroen-btn-service">
         Réserver votre véhicule
       </a>
     </div>
 
-    <div class="citroen-page-service-visual">
+    <div class="citroen-service-image">
       <img src="images/rent.svg" alt="Free2Move Rent">
     </div>
-
   </div>
 </section>
 
 
+<!-- ================= BLOC CONCESSIONS CITROËN ================= -->
+<section class="citroen-services">
+  <div class="citroen-services-inner">
+    <span class="citroen-eyebrow">Accédez rapidement à votre concession</span>
+    <h2 class="citroen-service-title">Avignon ou Tarascon, toutes les informations en un clic</h2>
+  </div>
+</section>
 
-    <!-- GUIDES D’UTILISATION -->
-    <div class="section-content">
-      <h3>Guides d’utilisation de votre véhicule</h3>
-      <p>
-        Citroën met à disposition des guides d’utilisation complets pour vous accompagner
-        dans la prise en main et l’utilisation de votre véhicule.
-      </p>
-
-      <p>
-        Vous y trouverez notamment les notices d’utilisation, les explications des
-        équipements ainsi que des conseils d’entretien et de sécurité.
-      </p>
-
-      <p>
-        <a href="#" target="_blank" rel="noopener">
-          Accéder aux guides officiels Citroën
-        </a>
-      </p>
-    </div>
-
-     <!-- ================= BLOC CONCESSIONS ================= -->
-
-  <section class="section-service">
-    <div class="service-inner">
-      <span class="service-eyebrow">Accédez rapidement à votre concession</span>
-      <h2 class="service-title">Avignon ou Tarascon, toutes les informations en un clic</h2>
-    </div>
-  </section>
-
-
-  <section class="quick-concessions">
-    <div class="container">
-      <p class="subtitle"></p>
-      <div class="cards">
-        <div class="card" id="card-avignon">
-          <h3>MIDI AUTO 84</h3>
-          <p class="city">AVIGNON</p>
-          <span class="cta">Voir les informations →</span>
-        </div>
-        <div class="card" id="card-tarascon">
-          <h3>MIDI AUTO 84</h3>
-          <p class="city">TARASCON</p>
-          <span class="cta">Voir les informations →</span>
-        </div>
+<section class="citroen-quick-concessions">
+  <div class="container">
+    <div class="cards">
+      <div class="card" id="citroen-card-avignon">
+        <h3>MIDI AUTO 84</h3>
+        <p class="city">AVIGNON</p>
+        <a href="#" class="cta citroen-open-modal" data-target="citroen-modal-avignon">Voir les informations →</a>
       </div>
-    </div>
-  </section>
-
-  <!-- ================= MODALE AVIGNON ================= -->
-  <div id="modal-avignon" class="modal-avignon">
-    <button id="close-modal-avignon" class="modal-close">×</button>
-    <div class="modal-content">
-      <div id="map-avignon" class="modal-map"></div>
-      <div class="modal-info">
-        <div class="modal-info-header">
-          <div class="modal-info-title">
-            <h2>MIDI AUTO 84 <br> AVIGNON</h2>
-          </div>
-        </div>
-        <div class="modal-info-content">
-          <div class="modal-info-list">
-            <div class="modal-info-item">
-              <img src="images/location-marker.24d85708.svg" alt="Adresse">
-              <div><strong>Adresse</strong><p>350 Avenue Charles Valente<br>84140 Montfavet</p></div>
-            </div>
-            <div class="modal-info-item">
-              <img src="images/location-phone.9890c7bd.svg" alt="Téléphone">
-              <div><strong>Téléphone</strong><p>04 90 13 30 00</p></div>
-            </div>
-          </div>
-          <div class="modal-services">
-            <h3><br> SERVICES DISPONIBLES</h3>
-            <div class="services-grid">
-              <a href="#" class="service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/passengercarsales.c2d7e7ac.svg"><div>Vente de véhicules neufs</div></a>
-              <a href="#" class="service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/usedcars.69fc791a.svg"><div>Vente de véhicules d'occasion</div></a>
-              <a href="#" class="service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/service.6f9e0a4a.svg"><div>Après-vente</div></a>
-              <a href="#" class="service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/parts.d2853218.svg"><div>Pièces de rechange</div></a>
-              <a href="#" class="service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/lcvSales.e055d512.svg"><div>LCV Sales</div></a>
-            </div>
-          </div>
-        </div>
-        <a href="tel:0490133000" class="modal-btn-call">Nous Contacter</a>
+      <div class="card" id="citroen-card-tarascon">
+        <h3>MIDI AUTO 84</h3>
+        <p class="city">TARASCON</p>
+        <a href="#" class="cta citroen-open-modal" data-target="citroen-modal-tarascon">Voir les informations →</a>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ================= MODALE TARASCON ================= -->
-  <div id="modal-tarascon" class="modal-avignon">
-    <button id="close-modal-tarascon" class="modal-close">×</button>
-    <div class="modal-content">
-      <div id="map-tarascon" class="modal-map"></div>
-      <div class="modal-info">
-        <div class="modal-info-header">
-          <div class="modal-info-title">
-            <h2>MIDI AUTO 84 <br> TARASCON</h2>
+
+<!-- ================= MODALE AVIGNON CITROËN ================= -->
+<div id="citroen-modal-avignon" class="citroen-modal-avignon">
+  <button id="citroen-close-modal-avignon" class="citroen-modal-close">×</button>
+  <div class="citroen-modal-content">
+    <div id="citroen-map-avignon" class="citroen-modal-map"></div>
+    <div class="citroen-modal-info">
+      <div class="citroen-modal-info-header">
+        <div class="citroen-modal-info-title">
+          <h2>MIDI AUTO 84 <br> AVIGNON</h2>
+        </div>
+      </div>
+      <div class="citroen-modal-info-content">
+        <div class="citroen-modal-info-list">
+          <div class="citroen-modal-info-item">
+            <img src="images/location-marker.24d85708.svg" alt="Adresse">
+            <div><strong>Adresse</strong><p>350 Avenue Charles Valente<br>84140 Montfavet</p></div>
+          </div>
+          <div class="citroen-modal-info-item">
+            <img src="images/location-phone.9890c7bd.svg" alt="Téléphone">
+            <div><strong>Téléphone</strong><p>04 90 13 30 00</p></div>
           </div>
         </div>
-        <div class="modal-info-content">
-          <div class="modal-info-list">
-            <div class="modal-info-item">
-              <img src="images/location-marker.24d85708.svg" alt="Adresse">
-              <div><strong>Adresse</strong><p>8 Boulevard Gambetta <br>13150 Tarascon</p></div>
-            </div>
-            <div class="modal-info-item">
-              <img src="images/location-phone.9890c7bd.svg" alt="Téléphone">
-              <div><strong>Téléphone</strong><p>04 90 91 12 71</p></div>
-            </div>
-          </div>
-          <div class="modal-services">
-            <h3><br>SERVICES DISPONIBLES</h3>
-            <div class="services-grid">
-              <a href="#" class="service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/passengercarsales.c2d7e7ac.svg"><div>Vente de véhicules neufs</div></a>
-              <a href="#" class="service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/usedcars.69fc791a.svg"><div>Vente de véhicules d'occasion</div></a>
-              <a href="#" class="service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/service.6f9e0a4a.svg"><div>Après-vente</div></a>
-              <a href="#" class="service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/lcvSales.e055d512.svg"><div>LCV Sales</div></a>
-            </div>
+        <div class="citroen-modal-services">
+          <h3><br>SERVICES DISPONIBLES</h3>
+          <div class="citroen-services-grid">
+            <a href="#" class="citroen-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/passengercarsales.c2d7e7ac.svg"><div>Vente de véhicules neufs</div></a>
+            <a href="#" class="citroen-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/usedcars.69fc791a.svg"><div>Vente de véhicules d'occasion</div></a>
+            <a href="#" class="citroen-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/service.6f9e0a4a.svg"><div>Après-vente</div></a>
+            <a href="#" class="citroen-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/parts.d2853218.svg"><div>Pièces de rechange</div></a>
+            <a href="#" class="citroen-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/lcvSales.e055d512.svg"><div>LCV Sales</div></a>
           </div>
         </div>
-        <a href="tel:0490911271" class="modal-btn-call">Nous contacter</a>
+        <a href="tel:0490133000" class="citroen-modal-btn-call">Nous Contacter</a>
       </div>
     </div>
   </div>
-</main>
+</div>
 
-<div class="choose-concession-modal" id="choose-concession-modal" style="display:none;">
-  <div class="choose-concession-content">
-    <button class="modal-close" id="close-choose-concession">×</button>
+<!-- ================= MODALE TARASCON CITROËN ================= -->
+<div id="citroen-modal-tarascon" class="citroen-modal-avignon">
+  <button id="citroen-close-modal-tarascon" class="citroen-modal-close">×</button>
+  <div class="citroen-modal-content">
+    <div id="citroen-map-tarascon" class="citroen-modal-map"></div>
+    <div class="citroen-modal-info">
+      <div class="citroen-modal-info-header">
+        <div class="citroen-modal-info-title">
+          <h2>MIDI AUTO 84 <br> TARASCON</h2>
+        </div>
+      </div>
+      <div class="citroen-modal-info-content">
+        <div class="citroen-modal-info-list">
+          <div class="citroen-modal-info-item">
+            <img src="images/location-marker.24d85708.svg" alt="Adresse">
+            <div><strong>Adresse</strong><p>8 Boulevard Gambetta <br>13150 Tarascon</p></div>
+          </div>
+          <div class="citroen-modal-info-item">
+            <img src="images/location-phone.9890c7bd.svg" alt="Téléphone">
+            <div><strong>Téléphone</strong><p>04 90 91 12 71</p></div>
+          </div>
+        </div>
+        <div class="citroen-modal-services">
+          <h3><br>SERVICES DISPONIBLES</h3>
+          <div class="citroen-services-grid">
+            <a href="#" class="citroen-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/passengercarsales.c2d7e7ac.svg"><div>Vente de véhicules neufs</div></a>
+            <a href="#" class="citroen-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/usedcars.69fc791a.svg"><div>Vente de véhicules d'occasion</div></a>
+            <a href="#" class="citroen-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/service.6f9e0a4a.svg"><div>Après-vente</div></a>
+            <a href="#" class="citroen-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/lcvSales.e055d512.svg"><div>LCV Sales</div></a>
+          </div>
+        </div>
+        <a href="tel:0490911271" class="citroen-modal-btn-call">Nous contacter</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="citroen-choose-concession-modal" id="citroen-choose-concession-modal" style="display:none;">
+  <div class="citroen-choose-concession-content">
+    <button class="citroen-modal-close" id="citroen-close-choose-concession">×</button>
     <h3>Choisissez votre concession</h3>
     <p>Où souhaitez-vous prendre rendez-vous ?</p>
-    <div class="modal-actions">
-      <a href="https://www.citroen.fr/services/rendez-vous?concession=avignon" class="modal-btn">Avignon</a>
-      <a href="https://www.citroen.fr/services/rendez-vous?concession=tarascon" class="modal-btn">Tarascon</a>
+    <div class="citroen-modal-actions">
+      <a href="https://www.citroen.fr/services/rendez-vous?concession=avignon" class="citroen-modal-btn">Avignon</a>
+      <a href="https://www.citroen.fr/services/rendez-vous?concession=tarascon" class="citroen-modal-btn">Tarascon</a>
     </div>
   </div>
 </div>
 
 
-    <!-- RÉSEAUX SOCIAUX -->
-    <div class="section-content">
-      <h3>Suivez-nous</h3>
+<!-- RÉSEAUX SOCIAUX CITROËN -->
+<section class="citroen-page-social">
+  <div class="citroen-page-social-wrapper">
+    <div class="citroen-page-social-content">
+      <span class="eyebrow">Restez connectés</span>
+      <h3>Suivez nos réseaux sociaux</h3>
       <p>
         Retrouvez l’actualité de Midi Auto 84, les conseils d’entretien, les nouveautés
         Citroën et la vie de la concession sur nos réseaux sociaux.
       </p>
 
-      <ul class="social-links">
-        <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
-        <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+      <ul class="citroen-social-links">
+        <!-- Facebook -->
+        <li>
+          <a href="https://www.facebook.com/CitroenAvignonTarascon/" target="_blank" rel="noopener" class="citroen-social-link">
+            <svg class="citroen-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M22.675 0h-21.35C.592 0 0 .592 0 1.325v21.351C0 23.407.592 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.658-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.407 24 22.675V1.325C24 .592 23.407 0 22.675 0z"/>
+            </svg>
+          </a>
+        </li>
+
+        <!-- Instagram -->
+        <li>
+          <a href="https://www.instagram.com/citroenavignon.tarascon" target="_blank" rel="noopener" class="citroen-social-link">
+            <svg class="citroen-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M349.33 69.33H162.67C109.07 69.33 69.33 109.07 69.33 162.67v186.67c0 53.6 39.74 93.33 93.34 93.33h186.66c53.6 0 93.34-39.73 93.34-93.33V162.67c0-53.6-39.74-93.34-93.34-93.34zm61.34 280c0 33.07-26.93 60-60 60H162.67c-33.07 0-60-26.93-60-60V162.67c0-33.07 26.93-60 60-60h186.66c33.07 0 60 26.93 60 60v186.66z"/>
+              <path d="M256 164c-50.13 0-92 41.87-92 92s41.87 92 92 92 92-41.87 92-92-41.87-92-92-92zm0 152c-33.07 0-60-26.93-60-60s26.93-60 60-60 60 26.93 60 60-26.93 60-60 60z"/>
+              <circle cx="356.5" cy="155.5" r="14.5"/>
+            </svg>
+          </a>
+        </li>
+
+        <!-- LinkedIn -->
+        <li>
+          <a href="https://www.linkedin.com/company/citro%C3%ABn-avignon-sas-midi-auto-84/?viewAsMember=true" target="_blank" rel="noopener" class="citroen-social-link">
+            <svg class="citroen-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.91 0 54.2a53.71 53.71 0 1 1 107.42 0c0 29.71-24.09 53.9-53.63 53.9zM447.9 448h-92.68V302.4c0-34.7-.7-79.35-48.36-79.35-48.36 0-55.71 37.7-55.71 2.995V448h-92.68V148.9h88.99v1.561h.05c.476-.9 1.637-1.848 3.372-1.848 3.602 0 4.267 2.372 4.267 5.457v6.782z"/>
+            </svg>
+          </a>
+        </li>
+
+        <!-- TikTok -->
+        <li>
+          <a href="https://www.tiktok.com/@midiauto84" target="_blank" rel="noopener" class="citroen-social-link">
+            <svg class="citroen-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path d="M448,209.5c-12.4,5.5-25.7,9.2-39.8,11.1c-14,1.9-28.1,1.8-41.7-0.5v113.3c0,66.3-53.7,120-120,120
+                c-66.3,0-120-53.7-120-120c0-64.6,50.1-117.5,114.3-119.7v47.5c-37.8,2.1-67.9,33.4-67.9,72.2c0,39.8,32.3,72.2,72.2,72.2
+                c35.2,0,64.5-25.5,70.7-59.2c0.2-0.9,0.3-1.9,0.3-2.9V0h47.9C426.8,59.8,448,136.8,448,209.5z"/>
+            </svg>
+          </a>
+        </li>
       </ul>
     </div>
-
   </div>
 </section>
 
+
+  </div>
+</section>
+</main>
   <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
@@ -416,59 +526,109 @@
 </div>
 
 <script>
+/* ===== HERO GRADIENT ===== */
+function updateHeroCitroenGradient() {
+  const heroBg = document.querySelector('.hero-bg-citroen');
+  if (!heroBg) return;
+
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const percent = Math.min(Math.max(scrollTop / docHeight, 0), 1);
+
+  const opacity = 1 - percent * 0.3;
+
+  heroBg.style.background = `
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, ${opacity}),
+      rgba(91, 127, 149, ${opacity}),
+      rgba(122, 153, 172, ${opacity}),
+      rgba(255, 255, 255, 1)
+    )
+  `;
+}
+
+window.addEventListener('load', updateHeroCitroenGradient);
+window.addEventListener('scroll', updateHeroCitroenGradient);
+
+/* ===== MODALES HERO ===== */
+const btnContactHero = document.getElementById('open-contact-modal');
+const contactModal = document.getElementById('contact-modal');
+const closeContact = document.getElementById('close-contact-modal');
+
+if (btnContactHero && contactModal && closeContact) {
+  btnContactHero.addEventListener('click', e => {
+    e.preventDefault();
+    contactModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeContact.addEventListener('click', () => {
+    contactModal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  });
+
+  contactModal.addEventListener('click', e => {
+    if (e.target === contactModal) {
+      contactModal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
+  // ===== MODALE CHOIX CONCESSION CITROËN =====
+  const openBtn = document.getElementById('open-citroen-choose-concession');
+  const modal = document.getElementById('citroen-choose-concession-modal');
+  const closeBtn = document.getElementById('close-citroen-choose-concession');
 
-  /* ===== MODALE CHOIX CONCESSION ATELIER (REUTILISATION ACCUEIL) ===== */
-  const openAtelierBtn = document.getElementById('citroen-page-atelier');
-  const chooseConcessionModal = document.getElementById('choose-concession-modal');
-  const closeChooseConcession = document.getElementById('close-choose-concession');
-
-  if (openAtelierBtn && chooseConcessionModal && closeChooseConcession) {
-
-    openAtelierBtn.addEventListener('click', function (e) {
+  if (openBtn && modal && closeBtn) {
+    openBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      chooseConcessionModal.style.display = 'flex';
+      modal.style.display = 'flex';
       document.body.style.overflow = 'hidden';
     });
 
-    closeChooseConcession.addEventListener('click', function () {
-      chooseConcessionModal.style.display = 'none';
+    closeBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
       document.body.style.overflow = 'auto';
     });
 
-    chooseConcessionModal.addEventListener('click', function (e) {
-      if (e.target === chooseConcessionModal) {
-        chooseConcessionModal.style.display = 'none';
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.style.display = 'none';
         document.body.style.overflow = 'auto';
       }
     });
   }
 
+  // ===== MAP AVIGNON =====
+  let mapAvignon = null;
+  const mapAv = document.getElementById('map-avignon');
+  if (mapAv) {
+    const pos = { lat: 43.919102, lng: 4.872694 };
+    mapAvignon = new google.maps.Map(mapAv, { center: pos, zoom: 15, disableDefaultUI: true });
+    new google.maps.Marker({ position: pos, map: mapAvignon, title: 'MIDI AUTO 84 AVIGNON' });
+    mapAvignon.addListener('click', () => {
+      window.open('https://www.google.com/maps/dir/?api=1&destination=43.919102,4.872694', '_blank');
+    });
+  }
+
+  // ===== MAP TARASCON =====
+  let mapTarascon = null;
+  const mapTa = document.getElementById('map-tarascon');
+  if (mapTa) {
+    const pos = { lat: 43.8056, lng: 4.6606 };
+    mapTarascon = new google.maps.Map(mapTa, { center: pos, zoom: 15, disableDefaultUI: true });
+    new google.maps.Marker({ position: pos, map: mapTarascon, title: 'MIDI AUTO 84 TARASCON' });
+    mapTarascon.addListener('click', () => {
+      window.open('https://www.google.com/maps/dir/?api=1&destination=43.8056,4.6606', '_blank');
+    });
+  }
 });
-
-/* ===== MAP AVIGNON ===== */
-let mapAvignon=null;
-function initMapAvignon(){
-  const pos={lat:43.919102,lng:4.872694};
-  mapAvignon=new google.maps.Map(document.getElementById('map-avignon'),{center:pos,zoom:15,disableDefaultUI:true});
-  new google.maps.Marker({position:pos,map:mapAvignon,title:'MIDI AUTO 84 AVIGNON'});
-  mapAvignon.addListener('click',()=>{window.open('https://www.google.com/maps/dir/?api=1&destination=43.919102,4.872694','_blank');});
-}
-
-/* ===== MAP TARASCON ===== */
-let mapTarascon=null;
-function initMapTarascon(){
-  const pos={lat:43.8056,lng:4.6606};
-  mapTarascon=new google.maps.Map(document.getElementById('map-tarascon'),{center:pos,zoom:15,disableDefaultUI:true});
-  new google.maps.Marker({position:pos,map:mapTarascon,title:'MIDI AUTO 84 TARASCON'});
-  mapTarascon.addListener('click',()=>{window.open('https://www.google.com/maps/dir/?api=1&destination=43.8056,4.6606','_blank');});
-}
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfxIjFwIWiOh-xS1kk9ocv9yyb-sT-m6Q&language=fr" defer></script>
-
-</script>
-
 
 </body>
 </html>
