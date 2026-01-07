@@ -978,6 +978,7 @@ footer {
   }
 }
 
+/* SERVICE */
 .service-section {
   padding: 60px 10%;
   display: flex;
@@ -1024,8 +1025,8 @@ footer {
 .btn-service {
   display: inline-block;
   padding: 12px 25px;
-  background: #000000;
-  color: #ffffff;
+  background: #5e17eb !important;
+  color: #ffffff !important;
   text-decoration: none;
   border-radius: 8px;
   transition: 0.3s;
@@ -1723,7 +1724,7 @@ footer {
   line-height: 1.6;
 }
 
-/* ===== SECTIONS QUI CONTACTER / ASSISTANCE ===== */
+/* ===== SECTION ASSISTANCE ===== */
 .citroen-sav-page .section-content {
   max-width: 780px;
   margin: 0 auto 80px auto;
@@ -2080,5 +2081,818 @@ footer {
   text-decoration: none !important;
 }
 
+.hero {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.hero-bg-citroen {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* ===============================
+   RÉSEAUX SOCIAUX - CITROËN
+   =============================== */
+.citroen-page-social-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.citroen-page-social .eyebrow {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: #5b7f95; /* bleu Citroën */
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
 
 
+.citroen-page-social-content h3 {
+  font-size: 1.6rem;
+  color: #111;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.citroen-page-social-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 25px;
+}
+
+.citroen-social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.citroen-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(91, 127, 149, 0.2);
+  transition: all 0.4s ease;
+}
+
+.citroen-social-svg {
+  width: 28px;
+  height: 28px;
+  fill: #5b7f95;       /* couleur initiale bleu Citroën */
+  transition: fill 0.4s ease, transform 0.3s ease;
+}
+
+.citroen-social-link:hover {
+  background: #5b7f95;
+}
+
+.citroen-social-link:hover .citroen-social-svg {
+  fill: #ffffff;       /* icône blanche au hover */
+  transform: scale(1.1);
+}
+
+.ds-page-social-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.ds-page-social-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #b51e41;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.ds-page-social-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 25px;
+}
+
+.ds-social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.ds-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(181, 30, 65, 0.2);
+  transition: all 0.4s ease;
+}
+
+.ds-social-svg {
+  width: 28px;
+  height: 28px;
+  fill: #b51e41;
+  transition: fill 0.4s ease, transform 0.3s ease;
+}
+
+.ds-social-link:hover {
+  background: #b51e41;
+}
+
+.ds-social-link:hover .ds-social-svg {
+  fill: #ffffff;
+  transform: scale(1.1);
+}
+
+.spoticar-page-social-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.spoticar-page-social-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #13d0ca;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.spoticar-page-social-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 25px;
+}
+
+.spoticar-social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.spoticar-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(19, 208, 202, 0.2);
+  transition: all 0.4s ease;
+}
+
+.spoticar-social-svg {
+  width: 28px;
+  height: 28px;
+  fill: #13d0ca;
+  transition: fill 0.4s ease, transform 0.3s ease;
+}
+
+.spoticar-social-link:hover {
+  background: #13d0ca;
+}
+
+.spoticar-social-link:hover .spoticar-social-svg {
+  fill: #ffffff;
+  transform: scale(1.1);
+}
+
+/* ===============================
+   QUI CONTACTER – CITROËN
+   =============================== */
+
+.citroen-page-contacts {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.citroen-page-contacts-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+/* En-tête */
+.citroen-page-contacts-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 60px;
+}
+
+.citroen-page-contacts-header h3 {
+  font-size: 1.6rem;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.citroen-page-contacts-header p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.citroen-sav-page .citroen-page-contacts-header .eyebrow {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: #5b7f95; /* bleu Citroën */
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Grille */
+.citroen-page-contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 40px;
+}
+
+/* Carte */
+.citroen-contact-card {
+  background: #f9f9f9;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+.citroen-contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(91, 127, 149, 0.2);
+}
+
+/* Icône */
+.citroen-contact-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: #5b7f95;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.citroen-contact-icon svg {
+  width: 36px;
+  height: 36px;
+  fill: #ffffff;
+}
+
+/* Titres */
+.citroen-contact-card h4 {
+  font-size: 1.1rem;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.citroen-contact-role {
+  font-size: 0.95rem;
+  color: #5b7f95;
+  margin-bottom: 18px;
+}
+
+/* Infos */
+.citroen-contact-infos span {
+  display: block;
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+/* ===============================
+   GUIDES D’UTILISATION – CITROËN
+   =============================== */
+
+.citroen-sav-page .citroen-page-guides {
+  background-color: #ffffff;
+}
+
+.citroen-sav-page .citroen-page-guides-content {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* Eyebrow */
+.citroen-sav-page .citroen-page-guides-content .eyebrow {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: #5b7f95; /* bleu Citroën */
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Titre */
+.citroen-sav-page .citroen-page-guides-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 20px;
+}
+
+/* Texte */
+.citroen-sav-page .citroen-page-guides-content p {
+  font-size: 1rem;
+  color: #4b4b4b;
+  max-width: 750px;
+  margin: 0 auto 22px;
+  line-height: 1.6;
+}
+
+/* Bouton */
+.citroen-sav-page .citroen-page-guides-content .citroen-page-btn {
+  margin-top: 18px;
+}
+
+/* ================= SERVICES CITROËN ================= */
+
+.citroen-service-section {
+  padding: 60px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff !important;
+}
+
+/* Intro services Citroën uniquement */
+.citroen-services-inner {
+  text-align: center;
+}
+
+.citroen-eyebrow {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: #5b7f95; /* bleu Citroën */
+  display: block;
+  margin-bottom: 10px;
+  text-align: center !important;
+}
+
+
+.citroen-service-section:nth-child(even) {
+  background: #fff;
+}
+
+.citroen-service-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.citroen-service-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.citroen-service-text {
+  flex: 1 1 400px;
+}
+
+.citroen-service-text h2 {
+  font-size: 2em;
+  margin-bottom: 4px;
+}
+
+.citroen-service-text h3 {
+  font-size:1em;
+  margin-top: 0;
+}
+
+.citroen-service-text p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.citroen-service-text ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.citroen-btn-service {
+   display: inline-block;
+  padding: 14px 30px;
+  background: #5b7f95;
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 40px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 22px rgba(91, 127, 149, 0.25);
+}
+
+.citroen-btn-service:hover {
+  background: #4f6f82;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(91, 127, 149, 0.35);
+}
+
+.citroen-service-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.citroen-service-image img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.citroen-service-image img {
+  max-width: 80%;
+}
+
+.citroen-service-text h2 {
+  color: #5b7f95; /* Bleu Citroën */
+}
+
+
+/* ================= MODALE CHOIX CONCESSION – CITROËN ================= */
+
+#citroen-choose-concession-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#citroen-choose-concession-modal .citroen-choose-concession-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 28px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#citroen-choose-concession-modal h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 12px;
+  color: #1a1a1a;
+}
+
+#citroen-choose-concession-modal p {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+#citroen-choose-concession-modal .citroen-btn-service {
+  padding: 14px 28px;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#citroen-choose-concession-modal .citroen-btn-service:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25),
+              0 4px 10px rgba(0,0,0,0.12);
+  background: #5b7f95;
+}
+
+#citroen-choose-concession-modal .citroen-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #1a1a1a;
+}
+
+
+/* ================= MODALE CTA CONTACT CITROËN ================= */
+
+/* OVERLAY MODALE */
+.citroen-modal-avignon,
+.citroen-modal-tarascon {
+  position: fixed;
+  inset: 0;
+  background: #5b7f95;
+  z-index: 1000;
+  display: none;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Bouton fermeture */
+.citroen-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* CONTENU */
+.citroen-modal-content {
+  height: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+}
+
+/* MAP — 70% */
+.citroen-modal-map {
+  width: 70%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* INFOS — 30% */
+.citroen-modal-info {
+  width: 30%;
+  background: #5b7f95;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: #fff;
+  overflow-y: auto;
+  max-height: 100%;
+  padding-right: 0.5rem;
+}
+
+/* Scrollbar moderne */
+.citroen-modal-info::-webkit-scrollbar {
+  width: 6px;
+}
+
+.citroen-modal-info::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.citroen-modal-info::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,.4);
+  border-radius: 10px;
+}
+
+.citroen-modal-info::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,.6);
+}
+
+/* Firefox */
+.citroen-modal-info {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,.4) transparent;
+}
+
+/* TITRE */
+.citroen-modal-info-title h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.citroen-modal-info-title span {
+  font-size: 1rem;
+  opacity: .8;
+}
+
+/* INFOS */
+.citroen-modal-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.citroen-modal-info-item {
+  display: flex;
+  gap: .75rem;
+  align-items: flex-start;
+}
+
+.citroen-modal-info-item img {
+  width: 20px;
+  height: 20px;
+  margin-top: .2rem;
+  filter: brightness(0) invert(1);
+}
+
+.citroen-modal-info-item strong {
+  font-size: .85rem;
+  display: block;
+}
+
+.citroen-modal-info-item p {
+  margin: .15rem 0 0;
+  font-size: .9rem;
+  line-height: 1.4;
+}
+
+/* BOUTON NOUS CONTACTER */
+.citroen-modal-btn-call {
+  display: inline-block;
+  background-color: #ffffff !important;  
+  color: #5b7f95 !important;             
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  width: fit-content;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.citroen-modal-btn-call:hover {
+  transform: translateY(-4px);
+}
+
+/* SERVICES DANS MODALE */
+.citroen-modal-services h3 {
+  margin: 0 0 .75rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.citroen-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .75rem;
+}
+
+.citroen-service-card {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .7rem;
+  background: rgba(255,255,255,.15);
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.citroen-service-card:hover {
+  background: rgba(255,255,255,.25);
+  transform: translateY(-2px);
+}
+
+.citroen-service-card img {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.citroen-service-card div {
+  font-size: .75rem;
+  line-height: 1.2;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .citroen-modal-content {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .citroen-modal-map {
+    width: 100%;
+    height: 55%;
+  }
+
+  .citroen-modal-info {
+    width: 100%;
+    height: 45%;
+  }
+}
+
+/* ================= CARDS CONCESSIONS CITROËN ================= */
+.citroen-quick-concessions .cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.citroen-quick-concessions .card {
+  background: #ffffff; /* fond blanc */
+  color: #000; /* texte noir par défaut */
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1 1 200px;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.citroen-quick-concessions .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.citroen-quick-concessions .card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700; /* gras */
+  color: #000;       /* noir */
+}
+
+.citroen-quick-concessions .card .city {
+  font-size: 1.6rem;  /* plus gros que h3 */
+  font-weight: 700;   /* gras */
+  color: #5b7f95;     /* bleu Citroën */
+  margin-bottom: 0.8rem;
+}
+
+.citroen-quick-concessions .card p {
+  font-size: 1rem;
+  font-weight: 700;  /* gras */
+  color: #000;       /* noir */
+  margin-top: 1rem;
+}
+
+.citroen-quick-concessions .card .cta {
+  display: inline-block;
+  color: #000000;          /* bleu Citroën */
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.citroen-quick-concessions .card .cta:hover {
+  background: rgba(91,127,149,0.2);
+  transform: translateY(-2px);
+}
