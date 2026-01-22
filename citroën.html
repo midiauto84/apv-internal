@@ -26,21 +26,30 @@
 
 
   <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/Logo MA.png" alt="Midi Auto 84">
-      </a>
-   </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="citroën.html">Citroën</a></li>
-        <li><a href="ds.html">DS Automobiles</a></li>
-        <li><a href="spoticar.html">Spoticar</a></li>
-      </ul>
-    </nav>
-  </header>
+     <header class="spoticar-header">
+        <div class="spoticar-header-inner">
+
+          <div class="spoticar-header-logo">
+            <a href="index.html">
+              <img src="images/Logo MA.png" alt="Midi Auto 84">
+            </a>
+          </div>
+
+          <button class="spoticar-menu-toggle" aria-label="Ouvrir le menu">
+            ☰
+          </button>
+
+          <nav class="spoticar-header-nav">
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="citroën.html">Citroën</a></li>
+              <li><a href="ds.html">DS Automobiles</a></li>
+              <li><a href="spoticar.html">Spoticar</a></li>
+            </ul>
+          </nav>
+
+        </div>
+      </header>
 
   <main>
     
@@ -99,7 +108,6 @@
         <p class="citroen-contact-role">Metteur en main</p>
 
         <div class="citroen-contact-infos">
-          <span>Tél. : à renseigner</span>
           <span>Email : herve.chardenon@citroen-avignon.fr </span>
         </div>
       </div>
@@ -117,7 +125,6 @@
         <p class="citroen-contact-role">Chargée de qualité</p>
 
         <div class="citroen-contact-infos">
-          <span>Tél. : à renseigner</span>
           <span>Email : qualite@citroen-avignon.fr </span>
         </div>
       </div>
@@ -135,7 +142,6 @@
         <p class="citroen-contact-role">Secrétaire de livraison</p>
 
         <div class="citroen-contact-infos">
-          <span>Tél. : à renseigner</span>
           <span>Email : sylvie.solfrini@citroen-avignon.fr </span>
         </div>
       </div>
@@ -153,7 +159,6 @@
         <p class="citroen-contact-role">Secrétaire de livraison</p>
 
         <div class="citroen-contact-infos">
-          <span>Tél. : à renseigner</span>
           <span>Email : berenice.bodelle@citroen-avignon.fr</span>
         </div>
       </div>
@@ -322,6 +327,7 @@
 
 
 <!-- ================= BLOC CONCESSIONS CITROËN ================= -->
+ <!--
 <section class="citroen-services">
   <div class="citroen-services-inner">
     <span class="citroen-eyebrow">Accédez rapidement à votre concession</span>
@@ -345,9 +351,9 @@
     </div>
   </div>
 </section>
-
-
+-->
 <!-- ================= MODALE AVIGNON CITROËN ================= -->
+ <!--
 <div id="citroen-modal-avignon" class="citroen-modal-avignon">
   <button id="citroen-close-modal-avignon" class="citroen-modal-close">×</button>
   <div class="citroen-modal-content">
@@ -384,9 +390,10 @@
     </div>
   </div>
 </div>
-
+-->
 <!-- ================= MODALE TARASCON CITROËN ================= -->
-<div id="citroen-modal-tarascon" class="citroen-modal-avignon">
+ <!--
+<div id="citroen-modal-tarascon" class="citroen-modal-tarascon">
   <button id="citroen-close-modal-tarascon" class="citroen-modal-close">×</button>
   <div class="citroen-modal-content">
     <div id="citroen-map-tarascon" class="citroen-modal-map"></div>
@@ -433,7 +440,7 @@
     </div>
   </div>
 </div>
-
+-->
 
 <!-- RÉSEAUX SOCIAUX CITROËN -->
 <section class="citroen-page-social">
@@ -496,7 +503,7 @@
 </section>
 </main>
   <!-- FOOTER -->
-<footer>
+<footer class="footer-citroen">
   <div class="footer-inner">
     <!-- Infos existantes empilées verticalement -->
     <div class="footer-info">
@@ -576,56 +583,113 @@ if (btnContactHero && contactModal && closeContact) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  // ===== MODALE CHOIX CONCESSION CITROËN =====
-  const openBtn = document.getElementById('open-citroen-choose-concession');
-  const modal = document.getElementById('citroen-choose-concession-modal');
-  const closeBtn = document.getElementById('close-citroen-choose-concession');
 
-  if (openBtn && modal && closeBtn) {
-    openBtn.addEventListener('click', function(e) {
+document.addEventListener('DOMContentLoaded', function () {
+
+  // ===== MODALE CHOIX CONCESSION CITROËN =====
+  const openChooseConcession = document.getElementById('open-citroen-choose-concession');
+  const chooseModal = document.getElementById('citroen-choose-concession-modal');
+  const closeChoose = document.getElementById('citroen-close-choose-concession');
+
+  if (openChooseConcession && chooseModal && closeChoose) {
+    openChooseConcession.addEventListener('click', function(e) {
       e.preventDefault();
-      modal.style.display = 'flex';
+      chooseModal.style.display = 'flex';
       document.body.style.overflow = 'hidden';
     });
 
-    closeBtn.addEventListener('click', function() {
-      modal.style.display = 'none';
+    closeChoose.addEventListener('click', function() {
+      chooseModal.style.display = 'none';
       document.body.style.overflow = 'auto';
     });
 
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) {
-        modal.style.display = 'none';
+    chooseModal.addEventListener('click', function(e) {
+      if (e.target === chooseModal) {
+        chooseModal.style.display = 'none';
         document.body.style.overflow = 'auto';
       }
     });
   }
 
-  // ===== MAP AVIGNON =====
-  let mapAvignon = null;
-  const mapAv = document.getElementById('map-avignon');
-  if (mapAv) {
-    const pos = { lat: 43.919102, lng: 4.872694 };
-    mapAvignon = new google.maps.Map(mapAv, { center: pos, zoom: 15, disableDefaultUI: true });
-    new google.maps.Marker({ position: pos, map: mapAvignon, title: 'MIDI AUTO 84 AVIGNON' });
-    mapAvignon.addListener('click', () => {
-      window.open('https://www.google.com/maps/dir/?api=1&destination=43.919102,4.872694', '_blank');
-    });
-  }
+  // ===== MODALES AVIGNON / TARASCON =====
+  const openBtns = document.querySelectorAll('.citroen-open-modal');
 
-  // ===== MAP TARASCON =====
-  let mapTarascon = null;
-  const mapTa = document.getElementById('map-tarascon');
-  if (mapTa) {
-    const pos = { lat: 43.8056, lng: 4.6606 };
-    mapTarascon = new google.maps.Map(mapTa, { center: pos, zoom: 15, disableDefaultUI: true });
-    new google.maps.Marker({ position: pos, map: mapTarascon, title: 'MIDI AUTO 84 TARASCON' });
-    mapTarascon.addListener('click', () => {
-      window.open('https://www.google.com/maps/dir/?api=1&destination=43.8056,4.6606', '_blank');
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.dataset.target;
+      const modal = document.getElementById(targetId);
+      if (!modal) return;
+
+      // n’ouvre la modale que sur clic
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+
+      // Initialiser la map seulement si pas encore faite
+      const mapDiv = modal.querySelector('.citroen-modal-map');
+      if (mapDiv && !mapDiv.dataset.mapInit) {
+        let pos;
+        if (targetId.includes('avignon')) pos = { lat: 43.919102, lng: 4.872694 };
+        if (targetId.includes('tarascon')) pos = { lat: 43.8056, lng: 4.6606 };
+
+        if (pos) {
+          const map = new google.maps.Map(mapDiv, {
+            center: pos,
+            zoom: 15,
+            disableDefaultUI: true
+          });
+
+          new google.maps.Marker({
+            position: pos,
+            map: map,
+            title: targetId.toUpperCase()
+          });
+
+          map.addListener('click', () => {
+            window.open(`https://www.google.com/maps/dir/?api=1&destination=${pos.lat},${pos.lng}`, '_blank');
+          });
+
+          mapDiv.dataset.mapInit = true;
+        }
+      }
     });
-  }
+  });
+
+  // ===== FERMETURE DES MODALES =====
+  const closeBtns = document.querySelectorAll('.citroen-modal-close');
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      const modal = this.closest('.citroen-modal-avignon, .citroen-modal-tarascon, #citroen-choose-concession-modal');
+      if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+  });
+
+  // ===== CLIC SUR L'OVERLAY =====
+  const modals = document.querySelectorAll('.citroen-modal-avignon, .citroen-modal-tarascon, #citroen-choose-concession-modal');
+  modals.forEach(modal => {
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+  });
+
 });
+</script>
+
+<script>
+const toggle = document.querySelector('.spoticar-menu-toggle');
+const nav = document.querySelector('.spoticar-header-nav');
+
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+
+
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfxIjFwIWiOh-xS1kk9ocv9yyb-sT-m6Q&language=fr" defer></script>
