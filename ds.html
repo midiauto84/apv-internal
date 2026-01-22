@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="fr">
-<head  >
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Midi Auto 84 — DS Automobiles</title>
@@ -9,120 +9,592 @@
   <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/Logo MA.png" alt="Midi Auto 84">
-      </a>
-   </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="citroën.html">Citroën</a></li>
-        <li><a href="ds.html">DS Automobiles</a></li>
-        <li><a href="spoticar.html">Spoticar</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <!-- HERO -->
+<!-- ================= MODALE HERO DS ================= -->
+<div class="contact-modal" id="contact-modal">
+  <div class="contact-modal-content">
+    <button class="modal-close" id="close-contact-modal">×</button>
+    <h3>Choisir une concession</h3>
+    <p>Quelle concession souhaitez-vous contacter ?</p>
+    <div class="modal-actions">
+      <a href="tel:0490133000" class="modal-btn">Appeler Avignon</a>
+      <a href="tel:0490911271" class="modal-btn">Appeler Tarascon</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+     <header class="spoticar-header">
+        <div class="spoticar-header-inner">
+
+          <div class="spoticar-header-logo">
+            <a href="index.html">
+              <img src="images/Logo MA.png" alt="Midi Auto 84">
+            </a>
+          </div>
+
+          <button class="spoticar-menu-toggle" aria-label="Ouvrir le menu">
+            ☰
+          </button>
+
+          <nav class="spoticar-header-nav">
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="citroën.html">Citroën</a></li>
+              <li><a href="ds.html">DS Automobiles</a></li>
+              <li><a href="spoticar.html">Spoticar</a></li>
+            </ul>
+          </nav>
+
+        </div>
+      </header>
+
+<main>
+
+  <!-- ================= HERO DS ================= -->
     <section class="hero">
-      <div class="hero-bg"></div>
+      <div class="ds-hero-bg"></div>
       <div class="hero-inner">
         <div class="hero-content">
-          <h1 class="typewriter-h1">Votre expérience après-vente :</h1>
-          <h2 class="typewriter-h2">Citroën · DS Automobiles · Spoticar</h2>
-          <p class="lead">
-            Accédez à vos informations essentielles, conseils d’entretien, services atelier et coordonnées directes pour les Concessions d'Avignon et de Tarascon.
-          </p>
+          <h1 class="typewriter-h1">Votre espace client DS Automobiles</h1>
+          <h2 class="typewriter-h2">Toutes les informations essentielles pour votre véhicule, au même endroit</h2>
+          <a href="#contact" id="open-contact-modal" class="btn-cta-call">Nous contacter</a>
         </div>
       </div>
     </section>
 
+  <!-- ================= SECTION INTRO ================= -->
+  <section class="ds-sav-page">
+    <div class="container">
 
+      <!-- INTRODUCTION DS -->
+      <div class="ds-section-header">
+        <span class="ds-eyebrow">Service après-vente DS Automobiles</span>
+        <h2>Un accompagnement dédié pour votre véhicule</h2>
+        <p class="ds-intro">
+          Cette page est dédiée à l'ensemble des services après-vente DS Automobiles proposés par
+          Midi Auto 84. Que vous ayez besoin d'un accompagnement administratif, d'un conseil
+          technique ou d'une assistance, nos équipes sont là pour vous orienter.
+        </p>
+      </div>
 
+      <!-- ================= QUI CONTACTER ================= -->
+      <section class="ds-page-contacts">
+        <div class="ds-page-contacts-wrapper">
 
+          <div class="ds-page-contacts-header">
+            <span class="ds-eyebrow">Interlocuteurs dédiés</span>
+            <h3>Qui contacter selon votre besoin</h3>
+            <p class="ds-intro">
+              Afin de vous répondre rapidement et efficacement, nos équipes sont organisées
+              par pôles de compétences. <br>
+              Un interlocuteur dédié est à votre écoute.
+            </p>
+          </div>
 
+          <div class="ds-page-contacts-grid">
+            <!-- Contact Cards -->
+            <div class="ds-contact-card">
+              <div class="ds-contact-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22.7 19.3l-6.2-6.2a6 6 0 0 0-7.9-7.9l3.2 3.2-2.1 2.1-3.2-3.2a6 6 0 0 0 7.9 7.9l6.2 6.2 2.1-2.1Z"/>
+                </svg>
+              </div>
+              <h4>Eric MANCINI</h4>
+              <p class="ds-contact-role">Metteur en main</p>
+              <div class="ds-contact-infos">
+                <span>Email : atelier@avignon.dsautomobiles.fr </span>
+              </div>
+            </div>
 
+            <div class="ds-contact-card">
+              <div class="ds-contact-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.8 6.1 20l1.2-6.5L2.5 8.9l6.6-.9L12 2z"/>
+                </svg>
+              </div>
+              <h4>Alice LECHEVALIER </h4>
+              <p class="ds-contact-role">Chargée de qualité</p>
+              <div class="ds-contact-infos">
+                <span>Email : qualite@citroen-avignon.fr </span>
+              </div>
+            </div>
 
+            <div class="ds-contact-card">
+              <div class="ds-contact-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 12c2.76 0 5-2.24 5-5S14.76 2 12 2 7 4.24 7 7s2.24 5 5 5Zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5Z"/>
+                </svg>
+              </div>
+              <h4>Bérénice BODELLE</h4>
+              <p class="ds-contact-role">Secrétaire de livraison</p>
+              <div class="ds-contact-infos">
+                <span>Email : berenice.bodelle@citroen-avignon.fr</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- ================= GUIDES ================= -->
+      <section class="ds-page-guides">
+        <div class="ds-page-guides-wrapper">
+          <div class="ds-page-guides-content">
+            <span class="ds-eyebrow">Documentation officielle</span>
+            <h3>Guides d'utilisation de votre véhicule DS Automobiles</h3>
+            <p>
+              Pour vous accompagner au quotidien, DS Automobiles met à votre disposition une plateforme
+              officielle regroupant l'ensemble des informations liées à l'utilisation de votre véhicule.
+            </p>
+            <p>
+              Vous y retrouverez les notices d'utilisation, les explications détaillées des équipements,
+              ainsi que des conseils pratiques pour l'entretien, la sécurité et les fonctionnalités
+              spécifiques à votre modèle.
+            </p>
+            <a href="https://service.citroen.com/DSddb/index.html" target="_blank" rel="noopener" class="ds-page-btn">
+              Accéder aux guides officiels DS Automobiles
+            </a>
+          </div>
+        </div>
+      </section>
 
-  <!-- RÉSEAUX SOCIAUX DS -->
-  <section class="ds-page-social">
-    <div class="ds-page-social-wrapper">
-      <div class="ds-page-social-content">
-        <h3>Suivez-nous</h3>
+      <!-- ================= ASSISTANCE ================= -->
+      <div class="ds-section-content">
+        <h3>Assistance DS Automobiles</h3>
         <p>
-          Retrouvez l’actualité de Midi Auto 84, les conseils d’entretien, les nouveautés
-          DS Store Avignon et la vie de la concession sur nos réseaux sociaux.
+          En cas de panne, d'accident ou d'immobilisation de votre véhicule, l'assistance
+          DS Automobiles est joignable 24h/24 et 7j/7. Ce service vous permet de bénéficier d'une
+          prise en charge rapide, où que vous soyez.
         </p>
 
-        <ul class="ds-social-links">
-          <!-- Facebook -->
-          <li>
-            <a href="https://www.facebook.com/dsavignon" target="_blank" rel="noopener" class="ds-social-link">
-              <svg class="ds-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M22.675 0h-21.35C.592 0 0 .592 0 1.325v21.351C0 23.407.592 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.658-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.407 24 22.675V1.325C24 .592 23.407 0 22.675 0z"/>
-              </svg>
-            </a>
-          </li>
+        <p class="ds-assistance-number">
+          <strong>Numéro d'assistance DS Automobiles :</strong><br>
+          <a href="tel:0080024240707" class="ds-page-btn">Assistance DS Automobiles</a>
+        </p>
 
-          <!-- Instagram -->
-          <li>
-            <a href="https://www.instagram.com/dsstoreavignon" target="_blank" rel="noopener" class="ds-social-link">
-              <svg class="ds-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M349.33 69.33H162.67C109.07 69.33 69.33 109.07 69.33 162.67v186.67c0 53.6 39.74 93.33 93.34 93.33h186.66c53.6 0 93.34-39.73 93.34-93.33V162.67c0-53.6-39.74-93.34-93.34-93.34zm61.34 280c0 33.07-26.93 60-60 60H162.67c-33.07 0-60-26.93-60-60V162.67c0-33.07 26.93-60 60-60h186.66c33.07 0 60 26.93 60 60v186.66z"/>
-                <path d="M256 164c-50.13 0-92 41.87-92 92s41.87 92 92 92 92-41.87 92-92-41.87-92-92-92zm0 152c-33.07 0-60-26.93-60-60s26.93-60 60-60 60 26.93 60 60-26.93 60-60 60z"/>
-                <circle cx="356.5" cy="155.5" r="14.5"/>
-              </svg>
-            </a>
-          </li>
-
-          <!-- LinkedIn -->
-          <li>
-            <a href="https://www.linkedin.com/company/ds-store-avignon" target="_blank" rel="noopener" class="ds-social-link">
-              <svg class="ds-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.91 0 54.2a53.71 53.71 0 1 1 107.42 0c0 29.71-24.09 53.9-53.63 53.9zM447.9 448h-92.68V302.4c0-34.7-.7-79.35-48.36-79.35-48.36 0-55.71 37.7-55.71 2.995V448h-92.68V148.9h88.99v1.561h.05c.476-.9 1.637-1.848 3.372-1.848 3.602 0 4.267 2.372 4.267 5.457v6.782z"/>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <p class="ds-assistance-note">
+          Nous vous recommandons d'enregistrer ce numéro dans votre téléphone.
+        </p>
       </div>
+
     </div>
   </section>
 
- </main>
+<!-- ================= SERVICES DS ================= -->
+
+<section class="ds-services">
+  <div class="ds-services-inner">
+    <span class="ds-eyebrow">Découvrez notre savoir-faire</span>
+    <h2>Nos services DS Automobiles</h2>
+  </div>
+</section>
+
+<!-- ================= ATELIER DS ================= -->
+
+<section class="ds-service-section" id="ds-atelier">
+  <div class="ds-service-content">
+    <div class="ds-service-text">
+      <h2>Atelier</h2><h3> Entretien & Réparations</h3><br>
+      <p>
+        Confiez votre DS à nos experts. Nos techniciens assurent l'entretien
+        et les réparations avec soin et rapidité,
+        pour que vous profitiez pleinement de votre véhicule en toute sécurité.
+      </p>
+      <ul>
+        <li>Expertise 100 % constructeur DS Automobiles</li>
+        <li>Forfaits clairs et transparents</li>
+        <li>Rendez-vous rapides pour limiter l'attente</li>
+      </ul>
+      <a href="tel:0490133000" id="ds-open-choose-concession" class="ds-btn-service">
+        Prendre rendez-vous
+      </a>
+    </div>
+
+    <div class="ds-service-image">
+      <img src="images/Atelier.svg" alt="Atelier DS Automobiles">
+    </div>
+  </div>
+</section>
+
+<!-- ================= PIÈCES DS ================= -->
+
+<section class="ds-service-section" id="ds-pieces">
+  <div class="ds-service-content reverse">
+    <div class="ds-service-text">
+      <h2>Pièces de rechange</h2><h3> Qualité & Fiabilité</h3><br>
+      <p>
+        Offrez à votre voiture la qualité et la fiabilité DS Automobiles.
+        Nos pièces d'origine sont conçues pour garantir sécurité, longévité et performance.
+      </p>
+      <ul>
+        <li>Qualité et fiabilité garanties</li>
+        <li>Disponibilité rapide pour ne pas immobiliser votre véhicule</li>
+        <li>Promotions régulières sur consommables</li>
+        <li>Accessoires pour personnaliser votre véhicule</li>
+      </ul>
+      <a href="tel:0490133008" class="ds-btn-service">
+        Découvrir nos offres
+      </a>
+    </div>
+
+    <div class="ds-service-image">
+      <img src="images/PR.svg" alt="Pièces DS Automobiles">
+    </div>
+  </div>
+</section>
+
+<!-- ================= RENT DS ================= -->
+
+<section class="ds-service-section" id="ds-rent">
+  <div class="ds-service-content">
+    <div class="ds-service-text">
+      <h2>Free2Move Rent</h2><h3> Location simplifiée </h3><br>
+      <p>
+        Louez un véhicule DS Automobiles en toute simplicité.
+        Idéal pour remplacer temporairement votre voiture, profiter d'un
+        véhicule plus grand pour un week-end ou tester un modèle récent.
+      </p>
+      <ul>
+        <li>Large choix de véhicules particuliers</li>
+        <li>Réservation simple et rapide en ligne ou en agence</li>
+        <li>Tarifs avantageux et offres spéciales pour les clients particuliers</li>
+      </ul>
+      <a href="tel:0490133796" id="ds-open-rent" class="ds-btn-service">
+        Réserver votre véhicule
+      </a>
+    </div>
+
+    <div class="ds-service-image">
+      <img src="images/rent.svg" alt="Free2Move Rent">
+    </div>
+  </div>
+</section>
+
+<!-- ================= BLOC CONCESSIONS DS ================= -->
+<section class="ds-services">
+  <div class="ds-services-inner">
+    <span class="ds-eyebrow">Accédez rapidement à votre concession</span>
+    <h2 class="ds-service-title">DS Store Avignon, toutes les informations en un clic</h2>
+  </div>
+</section>
+
+<section class="ds-quick-concessions">
+  <div class="cards">
+
+    <div class="card">
+      <h3>MIDI AUTO 84</h3>
+      <p class="city">AVIGNON</p>
+      <a href="#" class="cta ds-open-modal" data-target="ds-modal-avignon">
+        Voir les informations →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= MODALE AVIGNON DS ================= -->
+ <!--
+<div id="ds-modal-avignon" class="ds-modal ds-modal-avignon">
+
+  <button class="ds-modal-close">×</button>
+
+  <div class="ds-modal-content">
+
+   
+    <div id="ds-map-avignon" class="ds-modal-map"></div>
+
+    
+    <div class="ds-modal-info">
+
+     
+      <div class="ds-modal-info-header">
+        <h2>MIDI AUTO 84<br>AVIGNON</h2>
+      </div>
+
+      <div class="ds-modal-info-content">
+
+        <div class="ds-modal-info-list">
+
+          <div class="ds-modal-info-item">
+            <img src="images/location-marker.24d85708.svg" alt="">
+            <div>
+              <strong>Adresse</strong>
+              <p>350 Avenue Charles Valente<br>84140 Montfavet</p>
+            </div>
+          </div>
+
+          <div class="ds-modal-info-item">
+            <img src="images/location-phone.9890c7bd.svg" alt="">
+            <div>
+              <strong>Téléphone</strong>
+              <p>04 90 13 30 00</p>
+            </div>
+          </div>
+
+        </div>
+
+      
+        <div class="ds-modal-services">
+          <h3>SERVICES DISPONIBLES</h3>
+
+          <div class="ds-services-grid">
+            <a class="ds-service-card">
+              <img src="https://prod-dot-carussel-dwt.appspot.com/passengercarsales.c2d7e7ac.svg">
+              <div>Vente de véhicules neufs</div>
+            </a>
+
+            <a class="ds-service-card">
+              <img src="https://prod-dot-carussel-dwt.appspot.com/usedcars.69fc791a.svg">
+              <div>Vente de véhicules d'occasion</div>
+            </a>
+
+            <a class="ds-service-card">
+              <img src="https://prod-dot-carussel-dwt.appspot.com/service.6f9e0a4a.svg">
+              <div>Après-vente</div>
+            </a>
+          </div>
+        </div>
+
+       
+        <a href="tel:0490133000" class="ds-modal-btn-call">
+          Nous contacter
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<!-- RÉSEAUX SOCIAUX DS -->
+<section class="ds-page-social">
+  <div class="ds-page-social-wrapper">
+    <div class="ds-page-social-content">
+      <span class="ds-eyebrow">Restez connectés</span>
+      <h3>Suivez nos réseaux sociaux</h3>
+      <p>
+        Retrouvez l'actualité de Midi Auto 84, les conseils d'entretien, les nouveautés
+        DS Automobiles et la vie de la concession sur nos réseaux sociaux.
+      </p>
+
+      <ul class="ds-social-links">
+        <!-- Facebook -->
+        <li>
+          <a href="https://www.facebook.com/CitroenAvignonTarascon/" target="_blank" rel="noopener" class="ds-social-link">
+            <svg class="ds-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M22.675 0h-21.35C.592 0 0 .592 0 1.325v21.351C0 23.407.592 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.658-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.407 24 22.675V1.325C24 .592 23.407 0 22.675 0z"/>
+            </svg>
+          </a>
+        </li>
+
+        <!-- Instagram -->
+        <li>
+          <a href="https://www.instagram.com/citroenavignon.tarascon" target="_blank" rel="noopener" class="ds-social-link">
+            <svg class="ds-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M349.33 69.33H162.67C109.07 69.33 69.33 109.07 69.33 162.67v186.67c0 53.6 39.74 93.33 93.34 93.33h186.66c53.6 0 93.34-39.73 93.34-93.33V162.67c0-53.6-39.74-93.34-93.34-93.34zm61.34 280c0 33.07-26.93 60-60 60H162.67c-33.07 0-60-26.93-60-60V162.67c0-33.07 26.93-60 60-60h186.66c33.07 0 60 26.93 60 60v186.66z"/>
+              <path d="M256 164c-50.13 0-92 41.87-92 92s41.87 92 92 92 92-41.87 92-92-41.87-92-92-92zm0 152c-33.07 0-60-26.93-60-60s26.93-60 60-60 60 26.93 60 60-26.93 60-60 60z"/>
+              <circle cx="356.5" cy="155.5" r="14.5"/>
+            </svg>
+          </a>
+        </li>
+
+        <!-- LinkedIn -->
+        <li>
+          <a href="https://www.linkedin.com/company/citro%C3%ABn-avignon-sas-midi-auto-84/?viewAsMember=true" target="_blank" rel="noopener" class="ds-social-link">
+            <svg class="ds-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.91 0 54.2a53.71 53.71 0 1 1 107.42 0c0 29.71-24.09 53.9-53.63 53.9zM447.9 448h-92.68V302.4c0-34.7-.7-79.35-48.36-79.35-48.36 0-55.71 37.7-55.71 2.995V448h-92.68V148.9h88.99v1.561h.05c.476-.9 1.637-1.848 3.372-1.848 3.602 0 4.267 2.372 4.267 5.457v6.782z"/>
+            </svg>
+          </a>
+        </li>
+
+        <!-- TikTok -->
+        <li>
+          <a href="https://www.tiktok.com/@midiauto84" target="_blank" rel="noopener" class="ds-social-link">
+            <svg class="ds-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path d="M448,209.5c-12.4,5.5-25.7,9.2-39.8,11.1c-14,1.9-28.1,1.8-41.7-0.5v113.3c0,66.3-53.7,120-120,120
+                c-66.3,0-120-53.7-120-120c0-64.6,50.1-117.5,114.3-119.7v47.5c-37.8,2.1-67.9,33.4-67.9,72.2c0,39.8,32.3,72.2,72.2,72.2
+                c35.2,0,64.5-25.5,70.7-59.2c0.2-0.9,0.3-1.9,0.3-2.9V0h47.9C426.8,59.8,448,136.8,448,209.5z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  </div>
+</section>
+</main>
 
   <!-- FOOTER -->
-<footer>
+<footer class="footer-ds">
   <div class="footer-inner">
-    <!-- Infos existantes empilées verticalement -->
     <div class="footer-info">
       <div>© <strong>Midi Auto 84</strong> — Tous droits réservés</div>
       <div style="opacity:.85">Concessions Avignon · Tarascon</div>
     </div>
 
-    <!-- Accès rapide : obligations légales -->
     <div class="footer-right">
-  <div class="footer-section">
-    <h3>Accès rapide</h3>
-    <ul>
-      <li><a href="mentions.html">Mentions légales</a></li>
-      <li><a href="confidentialité.html">Politique de confidentialité</a></li>
-      <li><a href="egalité.html">Déclaration de l’égalité professionnelle</a></li>
-    </ul>
+      <div class="footer-section">
+        <h3>Accès rapide</h3>
+        <ul>
+          <li><a href="mentions.html">Mentions légales</a></li>
+          <li><a href="confidentialité.html">Politique de confidentialité</a></li>
+          <li><a href="egalité.html">Déclaration de l'égalité professionnelle</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Liens utiles</h3>
+        <ul>
+          <li><a href="atelier.html">Atelier</a></li>
+          <li><a href="pieces.html">Pièces de rechange</a></li>
+          <li><a href="free2move.html">Free2Move Rent</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <!-- Liens utiles -->
-  <div class="footer-section">
-    <h3>Liens utiles</h3>
-    <ul>
-      <li><a href="atelier.html">Atelier</a></li>
-      <li><a href="pieces.html">Pièces de rechange</a></li>
-      <li><a href="free2move.html">Free2Move Rent</a></li>
-    </ul>
-  </div>
-</div>
+</footer>
+
+<script>
+/* ==========================
+   HERO DS – GRADIENT DYNAMIQUE
+   ========================== */
+function updateHeroDSGradient() {
+  const heroBg = document.querySelector('.ds-hero-bg');
+  if (!heroBg) return;
+
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const percent = Math.min(Math.max(scrollTop / docHeight, 0), 1);
+  const opacity = 1 - percent * 0.3;
+
+  heroBg.style.background = `
+    linear-gradient(
+      to bottom,
+      rgba(180, 162, 152, ${opacity}), /* #B4A298 */
+      rgba(180, 162, 152, ${opacity} * 0.8),
+      rgba(180, 162, 152, ${opacity} * 0.5),
+      rgba(255, 255, 255, 1)
+  `;
+}
+
+window.addEventListener('load', updateHeroDSGradient);
+window.addEventListener('scroll', updateHeroDSGradient);
+
+/* ==========================
+   MODALE HERO DS
+   ========================== */
+const btnContactHero = document.getElementById('open-contact-modal');
+const contactModal = document.getElementById('contact-modal');
+const closeContact = document.getElementById('close-contact-modal');
+
+if (btnContactHero && contactModal && closeContact) {
+  btnContactHero.addEventListener('click', e => {
+    e.preventDefault();
+    contactModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeContact.addEventListener('click', () => {
+    contactModal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  });
+
+  contactModal.addEventListener('click', e => {
+    if (e.target === contactModal) {
+      contactModal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+}
+
+/* ==========================
+   MODALES AVIGNON / TARASCON / ATELIER DS
+   ========================== */
+document.addEventListener('DOMContentLoaded', function () {
+
+  const modalBtns = document.querySelectorAll('.ds-open-modal');
+
+  modalBtns.forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const targetId = this.dataset.target;
+      const modal = document.getElementById(targetId);
+      if (!modal) return;
+
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+
+      const mapDiv = modal.querySelector('.ds-modal-map');
+      if (mapDiv && !mapDiv.dataset.mapInit) {
+
+        let pos;
+        if (targetId.includes('avignon')) pos = { lat: 43.919102, lng: 4.872694 };
+        if (targetId.includes('tarascon')) pos = { lat: 43.8056, lng: 4.6606 };
+        if (!pos) return;
+
+        const map = new google.maps.Map(mapDiv, {
+          center: pos,
+          zoom: 15,
+          disableDefaultUI: true
+        });
+
+        new google.maps.Marker({
+          position: pos,
+          map: map
+        });
+
+        map.addListener('click', () => {
+          window.open(
+            `https://www.google.com/maps/dir/?api=1&destination=${pos.lat},${pos.lng}`,
+            '_blank'
+          );
+        });
+
+        mapDiv.dataset.mapInit = 'true';
+      }
+    });
+  });
+
+  /* FERMETURE BOUTON */
+  document.querySelectorAll('.ds-modal-close').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const modal = this.closest('.ds-modal');
+      if (!modal) return;
+
+      modal.classList.remove('is-open');
+      document.body.style.overflow = 'auto';
+    });
+  });
+
+  /* FERMETURE OVERLAY */
+  document.querySelectorAll('.ds-modal').forEach(modal => {
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = 'auto';
+      }
+    });
+  });
+
+});
+
+</script>
+
+<script>
+const toggle = document.querySelector('.spoticar-menu-toggle');
+const nav = document.querySelector('.spoticar-header-nav');
+
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfxIjFwIWiOh-xS1kk9ocv9yyb-sT-m6Q&language=fr" defer></script>
+
 </body>
 </html>
