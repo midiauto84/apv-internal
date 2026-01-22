@@ -106,13 +106,14 @@ nav ul li a:hover { background: rgba(15,23,42,0.06); }
 /* HERO SECTION */
 .hero {
   position: relative;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   overflow: hidden;
   color: #fff;
+  padding-top: 80px; /* laisse de l’espace pour le header */
+  height: calc(100vh - 80px); /* 100vh moins la hauteur du header */
 }
 
 .hero-bg {
@@ -128,30 +129,27 @@ nav ul li a:hover { background: rgba(15,23,42,0.06); }
 
 .hero-inner {
   position: relative;
-  z-index:2;
-  max-width:1200px;
-  width:90%;
-  display:flex;
+  z-index: 2;
+  max-width: 1200px;
+  width: 90%;
+  display: flex;
   flex-direction: column;
-  gap:1rem;
+  gap: 1rem;
   align-items: center;
-  text-align: center; /* centre le contenu */
 }
 
 .hero-content h1 {
-  display: inline-block;
   font-size: 3rem;
   font-weight: 900;
   opacity: 0;
   transform: translateY(20px);
   overflow: hidden;
-  white-space: nowrap;
-  width: 40ch;        /* largeur fixe pour éviter le recentrage */
+  width: 90%;         /* s’adapte à l’écran */
+  max-width: 40ch;    /* limite largeur texte pour les grands écrans */
   text-align: center;
+  white-space: normal; /* permet de revenir à la ligne */
   margin: 0 auto;
-
-  animation: typing 1.2s steps(40,end) forwards 0s,   /* d'abord écrire le texte */
-             fadeUp 0.6s forwards 1.2s;              /* puis monter et apparaître */
+  animation: typing 1.2s steps(40,end) forwards 0s, fadeUp 0.6s forwards 1.2s;
 }
 
 
@@ -162,8 +160,8 @@ nav ul li a:hover { background: rgba(15,23,42,0.06); }
   opacity: 0;
   transform: translateY(20px);
   color: #fafafa;
-  animation: fadeUp 0.6s forwards 1.8s;
   text-align: center;
+  animation: fadeUp 0.6s forwards 1.8s;
 }
 
 /* HERO CTA BUTTON - version claire */
@@ -2092,6 +2090,11 @@ footer {
   inset: 0;
 }
 
+.hero-bg-ds {
+  position: absolute;
+  inset: 0;
+}
+
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -2189,12 +2192,13 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 50px 20px;
+  margin-top: 100px;
 }
 
 .ds-page-social-content h3 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #b51e41;
+  color: #000000;
   text-align: center;
   margin-bottom: 15px;
 }
@@ -2245,66 +2249,7 @@ footer {
   transform: scale(1.1);
 }
 
-.spoticar-page-social-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px 20px;
-}
 
-.spoticar-page-social-content h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #13d0ca;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.spoticar-page-social-content p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #444;
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 25px;
-}
-
-.spoticar-social-links {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 25px;
-}
-
-.spoticar-social-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #ffffff;
-  box-shadow: 0 6px 20px rgba(19, 208, 202, 0.2);
-  transition: all 0.4s ease;
-}
-
-.spoticar-social-svg {
-  width: 28px;
-  height: 28px;
-  fill: #13d0ca;
-  transition: fill 0.4s ease, transform 0.3s ease;
-}
-
-.spoticar-social-link:hover {
-  background: #13d0ca;
-}
-
-.spoticar-social-link:hover .spoticar-social-svg {
-  fill: #ffffff;
-  transform: scale(1.1);
-}
 
 /* ===============================
    QUI CONTACTER – CITROËN
@@ -2562,6 +2507,43 @@ footer {
 
 
 /* ================= MODALE CHOIX CONCESSION – CITROËN ================= */
+/* MODALE CHOIX CONCESSION – SPOTICAR */
+#spoticar-choose-concession-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#spoticar-choose-concession-modal .spoticar-choose-concession-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 28px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#spoticar-choose-concession-modal .spoticar-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #1a1a1a;
+}
+
 
 #citroen-choose-concession-modal {
   display: none;
@@ -2775,65 +2757,6 @@ footer {
   transform: translateY(-4px);
 }
 
-/* SERVICES DANS MODALE */
-.citroen-modal-services h3 {
-  margin: 0 0 .75rem;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.citroen-services-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: .75rem;
-}
-
-.citroen-service-card {
-  display: flex;
-  align-items: center;
-  gap: .6rem;
-  padding: .7rem;
-  background: rgba(255,255,255,.15);
-  border-radius: 10px;
-  text-decoration: none;
-  color: #fff;
-  transition: background .2s ease, transform .2s ease;
-}
-
-.citroen-service-card:hover {
-  background: rgba(255,255,255,.25);
-  transform: translateY(-2px);
-}
-
-.citroen-service-card img {
-  width: 26px;
-  height: 26px;
-  flex-shrink: 0;
-}
-
-.citroen-service-card div {
-  font-size: .75rem;
-  line-height: 1.2;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .citroen-modal-content {
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .citroen-modal-map {
-    width: 100%;
-    height: 55%;
-  }
-
-  .citroen-modal-info {
-    width: 100%;
-    height: 45%;
-  }
-}
-
 /* ================= CARDS CONCESSIONS CITROËN ================= */
 .citroen-quick-concessions .cards {
   display: flex;
@@ -2864,27 +2787,27 @@ footer {
 .citroen-quick-concessions .card h3 {
   margin: 0 0 0.5rem;
   font-size: 1.2rem;
-  font-weight: 700; /* gras */
-  color: #000;       /* noir */
+  font-weight: 700;
+  color: #000;
 }
 
 .citroen-quick-concessions .card .city {
-  font-size: 1.6rem;  /* plus gros que h3 */
-  font-weight: 700;   /* gras */
-  color: #5b7f95;     /* bleu Citroën */
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #5b7f95; /* bleu Citroën */
   margin-bottom: 0.8rem;
 }
 
 .citroen-quick-concessions .card p {
   font-size: 1rem;
-  font-weight: 700;  /* gras */
-  color: #000;       /* noir */
+  font-weight: 700;
+  color: #000;
   margin-top: 1rem;
 }
 
 .citroen-quick-concessions .card .cta {
   display: inline-block;
-  color: #000000;          /* bleu Citroën */
+  color: #5b7f95;
   font-weight: 600;
   text-decoration: none;
   padding: 0.5rem 0.8rem;
@@ -2893,6 +2816,2329 @@ footer {
 }
 
 .citroen-quick-concessions .card .cta:hover {
-  background: rgba(91,127,149,0.2);
+  background: rgba(0,92,171,0.15);
   transform: translateY(-2px);
+}
+
+/* ================= MODALE CHOIX CONCESSION CITROËN ================= */
+#citroen-choose-concession-modal {
+  display: none; 
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#citroen-choose-concession-modal .citroen-choose-concession-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 28px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#citroen-choose-concession-modal h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 12px;
+  color: #1a1a1a;
+}
+
+#citroen-choose-concession-modal p {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+#citroen-choose-concession-modal .citroen-modal-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#citroen-choose-concession-modal .citroen-modal-btn:hover {
+  color: #ffffff;
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25), 0 4px 10px rgba(0,0,0,0.12);
+  background: #5b7f95;
+}
+
+#citroen-choose-concession-modal .citroen-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #1a1a1a;
+  transition: transform 0.3s ease;
+}
+
+#citroen-choose-concession-modal .citroen-modal-close:hover {
+  transform: scale(1.2);
+}
+
+/* ================= MODALES AVIGNON / TARASCON CITROËN ================= */
+.citroen-modal-avignon, .citroen-modal-tarascon {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(91, 127, 149, 0.97);/* overlay semi-transparent comme l'index */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.citroen-modal-avignon,
+.citroen-modal-tarascon,
+.citroen-choose-concession-modal {
+  display: none;
+}
+
+
+.citroen-modal-content {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  gap: 1rem; /* espace entre la map et la colonne droite */
+}
+
+/* MAP */
+.citroen-modal-map {
+  flex: 15;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+/* COLONNE DROITE */
+.citroen-modal-info {
+  flex: 5;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  background:  #5b7f95; /* fond violet semi-transparent comme index */
+  color: #fff;
+  border-radius: 12px;
+}
+
+/* HEADER */
+.citroen-modal-info-header {
+  flex-shrink: 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.citroen-modal-info-title h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* CONTENU SCROLLABLE */
+.citroen-modal-info-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 1rem;
+}
+
+/* LISTE D'INFOS */
+.citroen-modal-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.citroen-modal-info-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.citroen-modal-info-item img {
+  width: 20px;
+  height: 20px;
+  margin-top: 0.2rem;
+  filter: brightness(0) invert(1);
+}
+
+.citroen-modal-info-item strong {
+  font-size: 0.85rem;
+  display: block;
+}
+
+.citroen-modal-info-item p {
+  margin: 0.15rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* BOUTON NOUS CONTACTER */
+.citroen-modal-btn-call {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #5b7f95;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none !important;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  width: fit-content;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.citroen-modal-btn-call:hover {
+  transform: translateY(-4px);
+}
+
+/* SERVICES DANS MODALE */
+.citroen-modal-services h3 {
+  margin: 0 0 .75rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.citroen-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.citroen-service-card {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  text-decoration: none !important;
+  color: #fff !important;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.citroen-service-card:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
+.citroen-service-card img {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.citroen-service-card div {
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .citroen-modal-content {
+    flex-direction: column;
+    height: 100%;
+    gap: 0; /* pas d'espace sur mobile */
+  }
+
+  .citroen-modal-map {
+    width: 100%;
+    height: 55%;
+    border-radius: 0;
+  }
+
+  .citroen-modal-info {
+    width: 100%;
+    height: 45%;
+    border-radius: 0;
+  }
+
+  .citroen-quick-concessions .cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.footer-citroen {
+  padding: 36px 20px;
+  background: #5b7f95;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.footer-ds {
+  padding: 36px 20px;
+  background: #b4a298;
+  color: #fff;
+  margin-top: 40px;
+}
+
+
+
+/* ==============================
+   DS – Service Après-Vente
+   ============================== */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', Helvetica, sans-serif;
+  color: #111;
+}
+
+/* ================= HERO DS ================= */
+.ds-hero {
+  position: relative;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.ds-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(121, 102, 89, 1),rgba(180,162,152,1), rgba(198,184,162,1), rgba(210,199,190,1), rgba(233,231,225,1), rgba(255,255,255,1));
+  z-index: 0;
+  transition: background 0.3s ease;
+}
+
+.ds-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.ds-hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.ds-hero-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.ds-btn-cta-call {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 40px;
+  background: #b51e41;
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(181,30,65,0.25);
+  transition: all 0.3s ease;
+}
+
+.ds-btn-cta-call:hover {
+  background: #9e1a38;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(181,30,65,0.35);
+}
+
+/* ================= INTRO ================= */
+.ds-section-header {
+  text-align: center;
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.ds-eyebrow {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: #b51e41; /* bleu Citroën */
+  display: block;
+  margin-bottom: 10px;
+  text-align: center !important;
+}
+
+.ds-section-header .ds-eyebrow {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: #b51e41;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.ds-section-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.ds-section-header .ds-intro {
+  font-size: 1rem;
+  color: #4b4b4b;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ================= PAGE CONTACT ================= */
+.ds-page-contacts {
+  padding: 90px 0;
+  background: #fff;
+  text-align: center;
+  justify-content: center;
+}
+
+.ds-page-contacts-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+.ds-page-contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.ds-page-contacts-header h3 {
+  font-size: 1.6rem;
+  color: #111;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.ds-contact-card {
+  background: #f9f9f9;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+.ds-contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(181,30,65,0.2);
+}
+
+.ds-contact-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: #b51e41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-contact-icon svg {
+  width: 36px;
+  height: 36px;
+  fill: #fff;
+}
+
+.ds-contact-card h4 {
+  font-size: 1.1rem;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.ds-contact-role {
+  font-size: 0.95rem;
+  color: #b51e41;
+  margin-bottom: 18px;
+}
+
+.ds-contact-infos span {
+  display: block;
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+/* ================= PAGE GUIDES ================= */
+.ds-page-guides-wrapper {
+  max-width: 900px;
+  margin: 0 auto 80px auto;
+  padding: 40px 20px;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.ds-page-guides-content .ds-eyebrow {
+  color: #b51e41;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.ds-page-guides-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.ds-page-guides-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4b4b4b;
+  margin-bottom: 20px;
+}
+
+.ds-page-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 40px;
+  background: #b51e41;
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(181,30,65,0.25);
+  transition: all 0.3s ease;
+}
+
+.ds-page-btn:hover {
+  background: #9e1a38;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(181,30,65,0.35);
+}
+
+/* ================= ASSISTANCE ================= */
+.ds-section-content {
+  max-width: 780px;
+  margin: 0 auto 80px auto;
+  text-align: left;
+  padding: 40px 20px;
+  border-left: 3px solid #b51e41;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 100px;
+}
+
+.ds-section-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #b51e41;
+  margin-bottom: 15px;
+}
+
+.ds-section-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4b4b4b;
+  margin-bottom: 20px;
+}
+
+.ds-assistance-number {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.ds-assistance-number strong {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.ds-assistance-number .ds-page-btn {
+  font-size: 0.95rem;
+  padding: 12px 24px;
+}
+
+ /* ===============================
+   SERVICES / MODALES / BOUTONS
+   =============================== */
+
+.ds-service-section {
+  padding: 60px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff !important;
+}
+
+.ds-services-inner {
+  text-align: center;
+}
+
+.ds-service-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ds-service-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.ds-service-text {
+  flex: 1 1 400px;
+}
+
+.ds-service-text h2 {
+  font-size: 2em;
+  color: #b51e41;
+  margin-bottom: 4px;
+}
+
+.ds-service-text h3 {
+  font-size:1em;
+  margin-top: 0;
+}
+
+.ds-service-text p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.ds-service-text ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.ds-btn-service {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #b51e41;
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 40px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 22px rgba(181,30,65,0.25);
+}
+
+.ds-btn-service:hover {
+  background: #9e1a38;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(181,30,65,0.35);
+}
+
+.ds-service-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.ds-service-image img {
+  max-width: 80%;
+  border-radius: 15px;
+}
+
+/* ================= MODALES ================= */
+
+.ds-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(181,30,65,0.97);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.ds-modal.is-open {
+  display: flex;
+}
+
+.ds-modal-content {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  gap: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.ds-modal-map {
+  flex: 15;
+  min-height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ds-modal-info {
+  flex: 5;
+  background: #b51e41;
+  color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+}
+
+.ds-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* SCROLLBAR */
+.ds-modal-info::-webkit-scrollbar { width:6px; }
+.ds-modal-info::-webkit-scrollbar-track { background: transparent; }
+.ds-modal-info::-webkit-scrollbar-thumb { background: rgba(255,255,255,.4); border-radius:10px; }
+.ds-modal-info::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,.6); }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) { .ds-services-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 640px) { .ds-services-grid { grid-template-columns: 1fr; } }
+
+/* ================= CARDS CONCESSIONS DS ================= */
+
+.ds-quick-concessions .cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ds-quick-concessions .card {
+  background: #ffffff;
+  color: #111;
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1 1 200px;
+  max-width: 300px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.ds-quick-concessions .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.ds-quick-concessions .card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.ds-quick-concessions .card .city {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #b51e41;
+  margin-bottom: 0.8rem;
+}
+
+.ds-quick-concessions .card .cta {
+  display: inline-block;
+  color: #b51e41;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.ds-quick-concessions .card .cta:hover {
+  background: rgba(181,30,65,0.15);
+  transform: translateY(-2px);
+}
+
+/* ================= MODALES DS ================= */
+
+.ds-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(233,231,225,1);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.ds-modal.is-open {
+  display: flex;
+}
+
+/* CONTENEUR PRINCIPAL */
+.ds-modal-content {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  max-height: 90vh;
+  border-radius: 12px;
+  overflow: hidden;
+  gap: 1rem;                  /* espace entre les colonnes */
+  background: transparent;     /* plus de bande blanche */
+}
+
+
+/* MAP */
+.ds-modal-map {
+  flex: 15;
+  min-height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* COLONNE DROITE */
+.ds-modal-info {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  background: #b4a298;
+  color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* HEADER FIXE */
+.ds-modal-info-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.ds-modal-info-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* CONTENU SCROLLABLE */
+.ds-modal-info-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* LISTE INFOS */
+
+.ds-modal-map {
+  flex: 15;
+  height: 100%;
+  background: transparent;
+}
+
+.ds-modal-info-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.ds-service-card img {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+
+/* SERVICES */
+.ds-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 0.75rem;
+}
+
+.ds-modal-services h3 {
+  margin-bottom: 0.75rem;
+}
+
+.ds-service-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.6rem;
+  background: rgba(255,255,255,0.12);
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.ds-service-card:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
+.ds-service-card img {
+  width: 26px;
+  height: 26px;
+}
+
+/* CTA */
+.ds-modal-btn-call {
+  align-self: flex-start;
+  background: #ffffff;
+  color: #b51e41;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.ds-modal-btn-call:hover {
+  background: #b51e41;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* BOUTON FERMETURE */
+.ds-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: #b51e41;
+  cursor: pointer;
+}
+
+.ds-services-inner{
+  margin-top: 100px;
+}
+
+/* =========================================================
+   SPOTICAR – Service Après-Vente
+   Structure CSS propre / maintenable / responsive
+   ========================================================= */
+
+
+/* =========================================================
+   1. BASE / RESET / HEADER
+   ========================================================= */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', Helvetica, sans-serif;
+  color: #111;
+}
+
+/* =========================
+   HEADER SPOTICAR
+   ========================= */
+/* ================= HEADER DESKTOP ================= */
+
+.spoticar-header {
+  width: 100%;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.spoticar-header-inner {
+  width: 100%;
+  max-width: none;          /* ⬅️ clé du problème */
+  margin: 0;                /* ⬅️ enlève le centrage */
+  padding: 16px 32px;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.spoticar-header-logo img {
+  max-height: 60px;
+  display: block;
+}
+
+/* NAV DESKTOP */
+.spoticar-header-nav {
+  display: block;
+}
+
+.spoticar-header-nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.spoticar-header-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+}
+
+/* HAMBURGER CACHÉ SUR DESKTOP */
+.spoticar-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  /* Ligne logo + hamburger */
+  .spoticar-header-inner {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Hamburger à droite */
+  .spoticar-menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* Menu déroulant */
+  .spoticar-header-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+
+    background: #ffffff;
+    display: none;
+    flex-direction: column;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  .spoticar-header-nav.active {
+    display: block;
+  }
+
+  .spoticar-header-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .spoticar-header-nav li a {
+    display: block;
+    padding: 14px 24px;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+
+/* =========================================================
+   2. HERO SPOTICAR
+   ========================================================= */
+
+.spoticar-hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 80px; /* espace pour header desktop */
+  min-height: calc(100vh - 80px); /* full viewport moins header */
+  margin-top: 80px;
+}
+
+.hero-bg-spoticar {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: linear-gradient(to bottom, rgba(121,102,89,1), rgba(180,162,152,1), rgba(198,184,162,1), rgba(210,199,190,1), rgba(233,231,225,1), rgba(255,255,255,1));
+  z-index:0;
+  transition: background 0.5s ease;
+}
+
+.spoticar-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.spoticar-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  opacity: 0;
+  transform: translateY(20px);
+  overflow: hidden;
+  width: 90%;             /* s’adapte à l’écran */
+  max-width: 40ch;        /* limite largeur texte pour les grands écrans */
+  text-align: center;
+  white-space: normal;    /* permet de revenir à la ligne */
+  margin: 0 auto;
+  animation: typing 1.2s steps(40,end) forwards 0s,
+             fadeUp 0.6s forwards 1.2s;
+}
+
+.spoticar-hero-content h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  color: #fafafa;
+  text-align: center;
+  animation: fadeUp 0.6s forwards 1.8s;
+}
+
+.spoticar-btn-cta-call {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 40px;
+  background: #b51e41;
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(181,30,65,0.25);
+  transition: all 0.3s ease;
+}
+
+.spoticar-btn-cta-call:hover {
+  background: #9e1a38;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(181,30,65,0.35);
+}
+
+/* =========================================================
+   HERO SPOTICAR – RESPONSIVE
+   ========================================================= */
+@media (max-width: 1200px) {
+  .spoticar-hero {
+    height: calc(90vh - 80px);
+  }
+  .spoticar-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .spoticar-hero-content h2 {
+    font-size: 1.3rem;
+  }
+  .spoticar-btn-cta-call {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .spoticar-hero {
+    height: calc(80vh - 70px);
+  }
+  .spoticar-hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .spoticar-hero-content h2 {
+    font-size: 1.2rem;
+  }
+  .spoticar-btn-cta-call {
+    padding: 10px 22px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .spoticar-hero {
+    height: auto;
+    padding: 80px 15px 40px;
+  }
+  .spoticar-hero-content h1 {
+    font-size: 1.9rem;
+    max-width: 100%;
+  }
+  .spoticar-hero-content h2 {
+    font-size: 1rem;
+  }
+  .spoticar-btn-cta-call {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .spoticar-hero {
+    padding: 100px 12px 40px;
+  }
+  .spoticar-hero-content h1 {
+    font-size: 1.6rem;
+  }
+  .spoticar-hero-content h2 {
+    font-size: 0.95rem;
+  }
+  .spoticar-btn-cta-call {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+}
+
+
+/* =========================================================
+   3. HEADERS / INTRO SECTIONS
+   ========================================================= */
+
+.spoticar-section-header {
+  text-align: center;
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.spoticar-eyebrow {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: #13d0ca; /* bleu spoticar */
+  display: block;
+  margin-bottom: 10px;
+  text-align: center !important;
+}
+
+.spoticar-section-header .spoticar-eyebrow {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: #13d0ca;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.spoticar-section-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.spoticar-section-header .spoticar-intro {
+  font-size: 1rem;
+  color: #4b4b4b;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   4. PAGES CONTENU (CONTACTS / GUIDES / SOCIAL)
+   ========================================================= */
+
+/* CONTACTS */
+
+.spoticar-page-contacts {
+  padding: 90px 0;
+  background: #fff;
+  text-align: center;
+  justify-content: center;
+}
+
+.spoticar-page-contacts-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+.spoticar-page-contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.spoticar-page-contacts-header h3 {
+  font-size: 1.6rem;
+  color: #111;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.spoticar-contact-card {
+  background: #f9f9f9;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+.spoticar-contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px #13d0ca;
+}
+
+.spoticar-contact-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: #13d0ca;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spoticar-contact-icon svg {
+  width: 36px;
+  height: 36px;
+  fill: #fff;
+}
+
+.spoticar-contact-card h4 {
+  font-size: 1.1rem;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.spoticar-contact-role {
+  font-size: 0.95rem;
+  color: #13d0ca;
+  margin-bottom: 18px;
+}
+
+.spoticar-contact-infos span {
+  display: block;
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+/* GUIDES */
+
+.spoticar-page-guides-wrapper {
+  max-width: 900px;
+  margin: 0 auto 80px auto;
+  padding: 40px 20px;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.spoticar-page-guides-content .ds-eyebrow {
+  color: #13d0ca;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.spoticar-page-guides-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.spoticar-page-guides-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4b4b4b;
+  margin-bottom: 20px;
+}
+
+.spoticar-page-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 40px;
+  background: #13d0ca;
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.spoticar-page-btn:hover {
+  background: #13d0ca;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* =========================================================
+   5. SERVICES SPOTICAR
+   ========================================================= */
+
+.spoticar-service-section {
+  padding: 60px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff !important;
+}
+
+.spoticar-services-inner {
+  text-align: center;
+}
+
+.spoticar-service-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.spoticar-service-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.spoticar-service-text {
+  flex: 1 1 400px;
+}
+
+.spoticar-service-text h2 {
+  font-size: 2em;
+  color: #13d0ca;
+  margin-bottom: 4px;
+}
+
+.spoticar-service-text h3 {
+  font-size:1em;
+  margin-top: 0;
+}
+
+.spoticar-service-text p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.spoticar-service-text ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.spoticar-btn-service {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #13d0ca;
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 40px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.spoticar-btn-service:hover {
+  background: #13d0ca;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px #13d0ca;
+}
+
+.spoticar-service-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.spoticar-service-image img {
+  max-width: 80%;
+  border-radius: 15px;
+}
+
+/* ================= MODALES ================= */
+
+.spoticar-modal {
+  position: fixed;
+  inset: 0;
+  background: #13d0ca;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spoticar-modal.is-open {
+  display: flex;
+}
+
+.spoticar-modal-content {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  gap: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff !important;
+}
+
+.spoticar-modal-map {
+  flex: 15;
+  min-height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.spoticar-modal-info {
+  flex: 5;
+  background: #13d0ca;
+  color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+}
+
+.spoticar-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* SCROLLBAR */
+.spoticar-modal-info::-webkit-scrollbar { width:6px; }
+.spoticar-modal-info::-webkit-scrollbar-track { background: transparent; }
+.spoticar-modal-info::-webkit-scrollbar-thumb { background: rgba(255,255,255,.4); border-radius:10px; }
+.spoticar-modal-info::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,.6); }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) { .spoticar-services-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 640px) { .spoticar-services-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   6. CARDS CONCESSIONS
+   ========================================================= */
+
+.spoticar-quick-concessions .cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.spoticar-quick-concessions .card {
+  background: #ffffff;
+  color: #111;
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1 1 200px;
+  max-width: 300px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.spoticar-quick-concessions .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.spoticar-quick-concessions .card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.spoticar-quick-concessions .card .city {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #13d0ca;
+  margin-bottom: 0.8rem;
+}
+
+.spoticar-quick-concessions .card .cta {
+  display: inline-block;
+  color: #13d0ca;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.spoticar-quick-concessions .card .cta:hover {
+  background: #13d0ca;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   7. MODALES SPOTICAR
+   ========================================================= */
+
+#spoticar-modal-avignon,
+#spoticar-modal-tarascon,
+#spoticar-choose-concession-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* overlay sombre */
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none !important;
+}
+
+/* CONTENU PRINCIPAL DE LA MODALE */
+#spoticar-modal-avignon .spoticar-modal-content,
+#spoticar-modal-tarascon .spoticar-modal-content,
+#spoticar-choose-concession-modal .spoticar-choose-concession-content {
+  width: 90%;
+  max-width: 500px;
+  background: #ffffff;      /* fond blanc */
+  color: #000;              /* texte noir */
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+/* MAP */
+.spoticar-modal-map {
+  flex: 15;
+  min-height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* COLONNE DROITE (infos) */
+.spoticar-modal-info {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  background: #323e48;
+  color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* HEADER FIXE */
+.spoticar-modal-info-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #323e48;
+}
+
+.spoticar-modal-info-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* CONTENU SCROLLABLE */
+.spoticar-modal-info-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* LISTE INFOS */
+.spoticar-modal-info-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.spoticar-service-card img {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+/* SERVICES GRID */
+.spoticar-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+/* TITRE SERVICES */
+.spoticar-modal-services h3 {
+  margin-bottom: 0.75rem;
+}
+
+/* ================= CARDS DANS LES MODALES ================= */
+#spoticar-modal-avignon .spoticar-service-card,
+#spoticar-modal-tarascon .spoticar-service-card,
+#spoticar-choose-concession-modal .spoticar-modal-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.6rem;
+  background-color: rgba(19, 208, 202, 0.3); /* Spoticar bleu 30% */
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* Hover des cards uniquement */
+#spoticar-modal-avignon .spoticar-service-card:hover,
+#spoticar-modal-tarascon .spoticar-service-card:hover,
+#spoticar-choose-concession-modal .spoticar-modal-btn:hover {
+  background-color: rgba(19, 208, 202, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ================= BOUTONS OUVERTURE MODALES ================= */
+.spoticar-open-modal {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background: transparent;
+  color: #13d0ca;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* AUCUN hover */
+.spoticar-open-modal:hover {
+  background: transparent;
+  color: #13d0ca;
+}
+
+/* Le bouton d’ouverture ne doit jamais être stylé comme une card */
+.spoticar-open-modal.spoticar-service-card,
+.spoticar-open-modal:hover {
+  background: transparent !important;
+  transform: none !important;
+}
+
+/* ================= BOUTON CTA DANS MODALES ================= */
+.spoticar-modal-btn-call {
+  align-self: flex-start;
+  background: #ffffff;
+  color: #13d0ca;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transform: translateY(-2px);
+}
+
+.spoticar-modal-btn-call:hover {
+  background: #13d0ca;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ================= BOUTON FERMETURE ================= */
+.spoticar-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: #323e48;
+  cursor: pointer;
+}
+
+/* MARGE DES SERVICES */
+.spoticar-services-inner {
+  margin-top: 100px;
+}
+
+/* ================= CARDS DANS LES MODALES UNIQUEMENT ================= */
+#spoticar-modal-avignon .spoticar-service-card,
+#spoticar-modal-tarascon .spoticar-service-card,
+#spoticar-choose-concession-modal .spoticar-modal-btn {
+  background-color: rgba(19, 208, 202, 0.3);
+  border-radius: 8px;
+}
+
+/* Hover cards modales seulement */
+#spoticar-modal-avignon .spoticar-service-card:hover,
+#spoticar-modal-tarascon .spoticar-service-card:hover,
+#spoticar-choose-concession-modal .spoticar-modal-btn:hover {
+  background-color: rgba(19, 208, 202, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ================= FIX BOUTON AVIGNON ================= */
+
+/* On force le lien à être cliquable */
+#spoticar-card-avignon .spoticar-open-modal {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+/* On s'assure que rien ne passe au-dessus */
+#spoticar-card-avignon {
+  position: relative;
+}
+
+/* Sécurité : aucun overlay invisible */
+#spoticar-card-avignon::before,
+#spoticar-card-avignon::after {
+  pointer-events: none;
+}
+
+/* =========================================================
+   8. SOCIALS
+   ========================================================= */
+
+.spoticar-page-social-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.spoticar-page-social-content{
+  margin-top: 100px;
+}
+
+.spoticar-page-social-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.spoticar-page-social-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 25px;
+}
+
+.spoticar-social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.spoticar-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(19, 208, 202, 0.2);
+  transition: all 0.4s ease;
+}
+
+.spoticar-social-svg {
+  width: 28px;
+  height: 28px;
+  fill: #13d0ca;
+  transition: fill 0.4s ease, transform 0.3s ease;
+}
+
+.spoticar-social-link:hover {
+  background: #13d0ca;
+}
+
+.spoticar-social-link:hover .spoticar-social-svg {
+  fill: #ffffff;
+  transform: scale(1.1);
+}
+
+/* =========================================================
+   9. FOOTER
+   ========================================================= */
+
+.footer-spoticar {
+  padding: 36px 20px;
+  background: #006e90;
+  color: #fff;
+  margin-top: 40px;
+}
+
+/* =========================================================
+   10. RESPONSIVE (TOUJOURS À LA FIN)
+   ========================================================= */
+
+/* =========================
+   RESPONSIVE HEADER SPOTICAR
+   ========================= */
+@media (max-width: 1200px) {
+  .spoticar-header { padding: 15px 30px; }
+  .spoticar-header nav ul { gap: 20px; }
+}
+
+@media (max-width: 992px) {
+  .spoticar-header { flex-direction: column; align-items: flex-start; }
+  .spoticar-header nav ul { flex-direction: column; width: 100%; gap: 15px; }
+}
+
+@media (max-width: 768px) {
+  .spoticar-header { padding: 10px 20px; }
+  .spoticar-header nav ul { gap: 10px; }
+  .spoticar-header nav ul li a { font-size: 0.95rem; }
+}
+
+@media (max-width: 480px) {
+  .spoticar-header .logo img { max-width: 140px; }
+  .spoticar-header nav ul li a { font-size: 0.9rem; }
+}
+
+/* =========================
+   HERO SPOTICAR – RESPONSIVE
+   ========================= */
+
+:root {
+  --header-height: 80px;
+}
+
+/* HEADER HEIGHT SPOTICAR */
+.spoticar-hero {
+  padding-top: var(--header-height); /* espace pour ne pas recouvrir par le header */
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px; /* header plus petit sur tablette / mobile */
+  }
+}
+
+/* ================= FIX TRÈS PETITS ÉCRANS ================= */
+@media (max-width: 420px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .spoticar-hero,
+  .spoticar-hero * {
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .spoticar-hero-inner {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .spoticar-hero-content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .spoticar-hero-content h1,
+  .spoticar-hero-content h2 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    white-space: normal !important;
+    width: auto !important;
+    display: block !important;
+    animation: none !important;
+  }
+
+  .spoticar-btn-cta-call {
+    max-width: 100%;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+/* ================= RESPONSIVE SPOTICAR HERO ================= */
+@media (max-width: 1200px) {
+  .spoticar-hero {
+    height: 500px;
+    padding-top: calc(var(--header-height) + 20px);
+  }
+  .spoticar-hero-content h1 {
+    font-size: 2.2rem;
+    max-width: 35ch;
+  }
+  .spoticar-hero-content h2 {
+    font-size: 1.3rem;
+  }
+  .spoticar-btn-cta-call {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .spoticar-hero {
+    height: 450px;
+    padding-top: calc(var(--header-height) + 15px);
+  }
+  .spoticar-hero-content h1 {
+    font-size: 2rem;
+    max-width: 30ch;
+  }
+  .spoticar-hero-content h2 {
+    font-size: 1.2rem;
+  }
+  .spoticar-btn-cta-call {
+    padding: 10px 22px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .spoticar-hero {
+    height: auto;
+    padding: 80px 15px 40px;
+  }
+  .spoticar-hero-content h1 {
+    font-size: 1.9rem;
+    max-width: 100%;
+  }
+  .spoticar-hero-content h2 {
+    font-size: 1rem;
+  }
+  .spoticar-btn-cta-call {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .spoticar-hero {
+    padding: 100px 12px 40px;
+  }
+  .spoticar-hero-content h1 {
+    font-size: 1.6rem;
+  }
+  .spoticar-hero-content h2 {
+    font-size: 0.95rem;
+  }
+  .spoticar-btn-cta-call {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+}
+
+
+/* =========================
+   HEADER RESPONSIVE
+   ========================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  max-width: 180px;
+  height: auto;
+}
+
+header nav {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  font-size: 1rem;
+  color: #111;
+  text-decoration: none;
+  padding: 6px 0;
+}
+
+@media (max-width: 1200px) {
+  header { padding: 15px 30px; }
+  header nav { gap: 20px; }
+}
+
+@media (max-width: 992px) {
+  header { flex-direction: column; align-items: flex-start; }
+  header nav { width: 100%; gap: 15px; }
+}
+
+@media (max-width: 768px) {
+  header { padding: 10px 20px; }
+  header nav { flex-direction: column; width: 100%; }
+  header nav a { font-size: 0.95rem; }
+}
+
+@media (max-width: 480px) {
+  header .logo { max-width: 140px; }
+  header nav a { font-size: 0.9rem; }
+}
+
+
+/* ===== FOOTER ===== */
+@media (max-width: 1200px) { .footer-spoticar { padding: 30px 20px; } }
+@media (max-width: 992px) { .footer-spoticar { padding: 28px 18px; } }
+@media (max-width: 768px) { 
+  .footer-spoticar { padding: 25px 15px; text-align: center; } 
+  .spoticar-social-links { flex-direction: row; flex-wrap: wrap; gap: 15px; } 
+}
+@media (max-width: 480px) { 
+  .footer-spoticar { padding: 20px 10px; font-size: 0.9rem; } 
+  .spoticar-social-links { flex-direction: column; gap: 12px; } 
+}
+
+/* ===== MODALES ===== */
+@media (max-width: 1200px) { 
+  .spoticar-modal-content { flex-direction: row; gap: 0.5rem; } 
+  .spoticar-modal-map { min-height: 350px; } 
+}
+@media (max-width: 992px) { 
+  .spoticar-modal-content { flex-direction: column; max-height: 90vh; } 
+  .spoticar-modal-map { min-height: 250px; width: 100%; } 
+  .spoticar-modal-info { flex: none; max-height: 60vh; overflow-y: auto; padding: 1rem; } 
+  .spoticar-modal-close { top: 10px; right: 10px; font-size: 1.4rem; } 
+}
+@media (max-width: 768px) { 
+  .spoticar-modal-map { min-height: 200px; } 
+  .spoticar-modal-info { max-height: 50vh; padding: 0.8rem; } 
+}
+@media (max-width: 480px) { 
+  .spoticar-modal-map { min-height: 150px; } 
+  .spoticar-modal-info { max-height: 45vh; padding: 0.5rem; } 
+  .spoticar-modal-close { top: 8px; right: 8px; } 
+}
+
+/* ===== SERVICES / GRID ===== */
+@media (max-width: 1024px) { .spoticar-services-grid { grid-template-columns: 1fr; gap: 15px; } }
+@media (max-width: 640px) { .spoticar-services-grid { grid-template-columns: 1fr; gap: 12px; } }
+
+/* ===== CARDS CONCESSIONS ===== */
+@media (max-width: 992px) { 
+  .spoticar-quick-concessions .cards { flex-direction: column; gap: 15px; align-items: center; } 
+  .spoticar-quick-concessions .card { max-width: 100%; } 
+}
+
+/* =========================
+   FIX HERO – TRÈS PETITS ÉCRANS
+   ========================= */
+
+@media (max-width: 420px) {
+
+  .hero {
+    padding-left: 12px;
+    padding-right: 12px;
+    overflow-x: hidden;
+  }
+
+  .hero-inner {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hero-content h1,
+  .hero-content h2 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .btn-cta-call {
+    max-width: 100%;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+/* =========================
+   FIX HERO – TRÈS PETITS ÉCRANS
+   ========================= */
+
+@media (max-width: 420px) {
+
+  .hero {
+    padding-left: 12px;
+    padding-right: 12px;
+    overflow-x: hidden;
+  }
+
+  .hero-inner {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hero-content h1,
+  .hero-content h2 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .btn-cta-call {
+    max-width: 100%;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 420px) {
+
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .hero,
+  .hero * {
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .typewriter-h1,
+  .typewriter-h2 {
+    animation: none !important;
+    white-space: normal !important;
+    width: auto !important;
+    display: block !important;
+  }
+}
+
+:root {
+  --header-height: 80px;
+}
+
+.spoticar-hero {
+  padding-top: var(--header-height);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+}
+
+/* ================= RESPONSIVE HERO INDEX ================= */
+@media (max-width: 1200px) {
+  .hero {
+    height: calc(90vh - 80px);
+    padding-top: 60px;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+    max-width: 35ch;
+  }
+  .hero-content h2 {
+    font-size: 1.3rem;
+  }
+  .btn-cta-call {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    height: calc(80vh - 70px);
+    padding-top: 50px;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+    max-width: 30ch;
+  }
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+  .btn-cta-call {
+    padding: 10px 22px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 80px 15px 40px; /* espace haut + bas */
+  }
+  .hero-content h1 {
+    font-size: 1.9rem;
+    max-width: 100%;
+  }
+  .hero-content h2 {
+    font-size: 1rem;
+  }
+  .btn-cta-call {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 100px 12px 40px;
+  }
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+  .hero-content h2 {
+    font-size: 0.95rem;
+  }
+  .btn-cta-call {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
 }
