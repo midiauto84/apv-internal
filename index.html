@@ -36,16 +36,30 @@
 </div>
 
 <!-- ================= HEADER ================= -->
-<header>
-  <div class="logo"><a href="index.html"><img src="images/Logo MA.png" alt="Midi Auto 84"></a></div>
-  <nav>
-    <ul>
-      <li><a href="citroën.html">Citroën</a></li>
-      <li><a href="ds.html">DS Automobiles</a></li>
-      <li><a href="spoticar.html">Spoticar</a></li>
-    </ul>
-  </nav>
-</header>
+      <header class="spoticar-header">
+        <div class="spoticar-header-inner">
+
+          <div class="spoticar-header-logo">
+            <a href="index.html">
+              <img src="images/Logo MA.png" alt="Midi Auto 84">
+            </a>
+          </div>
+
+          <button class="spoticar-menu-toggle" aria-label="Ouvrir le menu">
+            ☰
+          </button>
+
+          <nav class="spoticar-header-nav">
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="citroën.html">Citroën</a></li>
+              <li><a href="ds.html">DS Automobiles</a></li>
+              <li><a href="spoticar.html">Spoticar</a></li>
+            </ul>
+          </nav>
+
+        </div>
+      </header>
 
 <main>
   <!-- ================= HERO ================= -->
@@ -316,7 +330,7 @@
 </section>
 
   <!-- ================= BLOC CONCESSIONS ================= -->
-
+<!--
   <section class="section-service">
     <div class="service-inner">
       <span class="service-eyebrow">Accédez rapidement à votre concession</span>
@@ -342,8 +356,9 @@
       </div>
     </div>
   </section>
-
+-->
   <!-- ================= MODALE AVIGNON ================= -->
+   <!--
   <div id="modal-avignon" class="modal-avignon">
     <button id="close-modal-avignon" class="modal-close">×</button>
     <div class="modal-content">
@@ -380,8 +395,9 @@
       </div>
     </div>
   </div>
-
+-->
   <!-- ================= MODALE TARASCON ================= -->
+   <!--
   <div id="modal-tarascon" class="modal-avignon">
     <button id="close-modal-tarascon" class="modal-close">×</button>
     <div class="modal-content">
@@ -430,7 +446,7 @@
     </div>
   </div>
 </div>
-
+-->
 
 <!-- ================= FOOTER ================= -->
 <footer>
@@ -616,6 +632,17 @@ function initMapTarascon(){
   new google.maps.Marker({position:pos,map:mapTarascon,title:'MIDI AUTO 84 TARASCON'});
   mapTarascon.addListener('click',()=>{window.open('https://www.google.com/maps/dir/?api=1&destination=43.8056,4.6606','_blank');});
 }
+</script>
+
+<script>
+const toggle = document.querySelector('.spoticar-menu-toggle');
+const nav = document.querySelector('.spoticar-header-nav');
+
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+
+
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfxIjFwIWiOh-xS1kk9ocv9yyb-sT-m6Q&language=fr" defer></script>
