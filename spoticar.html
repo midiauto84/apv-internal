@@ -3,51 +3,446 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Midi Auto 84 — Spoticar</title>
+  <title>Midi Auto 84 — Citroën</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
   <meta name="robots" content="noindex, nofollow">
 </head>
+
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/Logo MA.png" alt="Midi Auto 84">
-      </a>
-   </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="citroën.html">Citroën</a></li>
-        <li><a href="ds.html">DS Automobiles</a></li>
-        <li><a href="spoticar.html">Spoticar</a></li>
-      </ul>
-    </nav>
-  </header>
+
+<!-- ================= MODALE HERO ================= -->
+<div class="contact-modal" id="contact-modal">
+  <div class="contact-modal-content">
+    <button class="modal-close" id="close-contact-modal">×</button>
+    <h3>Choisir une concession</h3>
+    <p>Quelle concession souhaitez-vous contacter ?</p>
+    <div class="modal-actions">
+      <a href="tel:0490133000" class="modal-btn">Appeler Avignon</a>
+      <a href="tel:0490911271" class="modal-btn">Appeler Tarascon</a>
+    </div>
+  </div>
+</div>
+
+
+      <header class="spoticar-header">
+        <div class="spoticar-header-inner">
+
+          <div class="spoticar-header-logo">
+            <a href="index.html">
+              <img src="images/Logo MA.png" alt="Midi Auto 84">
+            </a>
+          </div>
+
+          <button class="spoticar-menu-toggle" aria-label="Ouvrir le menu">
+            ☰
+          </button>
+
+          <nav class="spoticar-header-nav">
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="citroën.html">Citroën</a></li>
+              <li><a href="ds.html">DS Automobiles</a></li>
+              <li><a href="spoticar.html">Spoticar</a></li>
+            </ul>
+          </nav>
+
+        </div>
+      </header>
+
 
   <main>
+    
     <!-- HERO -->
-    <section class="hero">
-      <div class="hero-bg"></div>
-      <div class="hero-inner">
-        <div class="hero-content">
-          <h1 class="typewriter-h1">Votre expérience après-vente :</h1>
-          <h2 class="typewriter-h2">Citroën · DS Automobiles · Spoticar</h2>
-          <p class="lead">
-            Accédez à vos informations essentielles, conseils d’entretien, services atelier et coordonnées directes pour les Concessions d'Avignon et de Tarascon.
-          </p>
+    <section class="spoticar-hero">
+  <div class="hero-bg-spoticar"></div>
+  <div class="spoticar-hero-inner">
+    <div class="spoticar-hero-content">
+      <h1 class="typewriter-h1">Votre espace client Spoticar</h1>
+      <h2 class="typewriter-h2">Toutes les informations essentielles pour votre véhicule, au même endroit</h2>
+      <a href="#contact" id="open-contact-modal" class="btn-cta-call">Nous contacter</a>
+  </div>
+</section>
+
+
+
+    <section class="spoticar-sav-page">
+  <div class="container">
+
+    <!-- INTRODUCTION -->
+    <div class="spoticar-section-header">
+      <span class="spoticar-eyebrow">Service après-vente Spoticar</span>
+      <h2>Un accompagnement dédié pour votre véhicule</h2>
+      <p class="spoticar-intro">
+        Cette page est dédiée à l’ensemble des services après-vente Spoticar proposés par
+        Midi Auto 84. Que vous ayez besoin d’un accompagnement administratif, d’un conseil
+        technique ou d’une assistance, nos équipes sont là pour vous orienter.
+      </p>
+    </div>
+
+<!-- QUI CONTACTER – CITROËN -->
+<section class="spoticar-page-contacts">
+  <div class="spoticar-page-contacts-wrapper">
+
+    <div class="spoticar-page-contacts-header">
+      <span class="spoticar-eyebrow">Interlocuteurs dédiés</span>
+      <h3>Qui contacter selon votre besoin</h3>
+      <p class="spoticar-intro">
+        Afin de vous répondre rapidement et efficacement, nos équipes sont organisées
+        par pôles de compétences. Un interlocuteur dédié est à votre écoute.
+      </p>
+    </div>
+
+    <div class="spoticar-page-contacts-grid">
+
+      <!-- CARTE 1 – TECHNIQUE (clé à molette) -->
+      <div class="spoticar-contact-card">
+        <div class="spoticar-contact-icon">
+          <!-- Picto clé à molette -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22.7 19.3l-6.2-6.2a6 6 0 0 0-7.9-7.9l3.2 3.2-2.1 2.1-3.2-3.2a6 6 0 0 0 7.9 7.9l6.2 6.2 2.1-2.1Z"/>
+          </svg>
+        </div>
+
+        <h4>Yaness OUAHJOUJOU</h4>
+        <p class="spoticar-contact-role">Metteur en main</p>
+
+        <div class="spoticar-contact-infos">
+          <span>Email : yaness.ouahjoujou@citroen-avignon.fr </span>
         </div>
       </div>
-    </section>
+
+      <!-- CARTE 2 – QUALITÉ -->
+      <div class="spoticar-contact-card">
+        <div class="spoticar-contact-icon">
+          <!-- Picto qualité / satisfaction -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.8 6.1 20l1.2-6.5L2.5 8.9l6.6-.9L12 2z"/>
+          </svg>
+        </div>
+
+        <h4>Alice LECHEVALIER</h4>
+        <p class="spoticar-contact-role">Chargée de qualité</p>
+
+        <div class="spoticar-contact-infos">
+          <span>Email : qualite@spoticar-avignon.fr </span>
+        </div>
+      </div>
+
+      <!-- CARTE 3 – ACCUEIL (bonhomme) -->
+      <div class="spoticar-contact-card">
+        <div class="spoticar-contact-icon">
+          <!-- Picto bonhomme -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 12c2.76 0 5-2.24 5-5S14.76 2 12 2 7 4.24 7 7s2.24 5 5 5Zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5Z"/>
+          </svg>
+        </div>
+
+        <h4>Tran PHAN</h4>
+        <p class="spoticar-contact-role">Secrétaire de livraison</p>
+
+        <div class="spoticar-contact-infos">
+          <span>Email : tran.phan@citroen-avignon.fr </span>
+        </div>
+      </div>
+
+      <!-- CARTE 5 – ACCUEIL (bonhomme) -->
+      <div class="spoticar-contact-card">
+        <div class="spoticar-contact-icon">
+          <!-- Picto bonhomme -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 12c2.76 0 5-2.24 5-5S14.76 2 12 2 7 4.24 7 7s2.24 5 5 5Zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5Z"/>
+          </svg>
+        </div>
+
+        <h4>Audrey NICOLAS</h4>
+        <p class="spoticar-contact-role">Secrétaire de livraison</p>
+
+        <div class="spoticar-contact-infos">
+          <span>Email : tran.phan@citroen-avignon.fr </span>
+        </div>
+      </div>
+
+      <!-- CARTE 4 – -->
+      <div class="spoticar-contact-card">
+        <div class="spoticar-contact-icon">
+          <!-- Picto clé à molette -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22.7 19.3l-6.2-6.2a6 6 0 0 0-7.9-7.9l3.2 3.2-2.1 2.1-3.2-3.2a6 6 0 0 0 7.9 7.9l6.2 6.2 2.1-2.1Z"/>
+          </svg>
+        </div>
+
+        <h4>Ramsi SOUAIFI</h4>
+        <p class="spoticar-contact-role">Expert VO</p>
+
+        <div class="spoticar-contact-infos">
+          <span>Email : ramzi.souaifi@citroen-avignon.fr</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
+<!-- GARANTIES SPOTICAR -->
+<section class="spoticar-page-guides">
+  <div class="spoticar-page-guides-wrapper">
 
-   <!-- RÉSEAUX SOCIAUX SPOTICAR -->
+    <div class="spoticar-page-guides-content">
+      <span class="spoticar-eyebrow">Garantie et sécurité</span>
+      <h3>Nos véhicules Spoticar sont garantis</h3>
+
+      <p>
+        Tous nos véhicules d'occasion Spoticar sont soigneusement contrôlés et bénéficient d’une garantie pour vous offrir
+        tranquillité d’esprit et sécurité lors de votre achat.
+      </p>
+
+      <p>
+        Découvrez l’ensemble des garanties Spoticar, leurs conditions et la couverture de chaque véhicule pour prendre
+        une décision en toute confiance.
+      </p>
+
+      <a
+        href="https://www.spoticar.fr/nos-vehicules-d-occasion-sont-tous-controles-garantis#nos-garanties-spoticar-ds-certified-alfa-romeo-certified"
+        target="_blank"
+        rel="noopener"
+        class="spoticar-page-btn"
+      >
+        En savoir plus sur nos garanties Spoticar
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= SERVICES SPOTICAR ================= -->
+
+<section class="spoticar-services">
+  <div class="spoticar-services-inner">
+    <span class="spoticar-eyebrow">Découvrez notre savoir-faire</span>
+    <h2>Nos services Citroën</h2>
+  </div>
+</section>
+
+<!-- ================= ATELIER ================= -->
+
+<section class="spoticar-service-section" id="spoticar-atelier">
+  <div class="spoticar-service-content">
+    <div class="spoticar-service-text">
+      <h2>Atelier</h2><h3> Entretien & Réparations</h3><br>
+      <p>
+        Confiez votre véhicule d'occasion à nos experts. Nos techniciens assurent l’entretien
+        et les réparations avec soin et rapidité,
+        pour que vous profitiez pleinement de votre véhicule en toute sécurité.
+      </p>
+      <ul>
+        <li>Expertise 100 % constructeur Citroën </li>
+        <li>Forfaits clairs et transparents</li>
+        <li>Rendez-vous rapides pour limiter l’attente</li>
+      </ul>
+      <a href="#" id="open-spoticar-choose-concession" class="spoticar-btn-service">
+        Prendre rendez-vous
+      </a>
+    </div>
+
+    <div class="spoticar-service-image">
+      <img src="images/Atelier.svg" alt="Atelier Citroën">
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODALE CHOIX CONCESSION ATELIER ================= -->
+
+<div class="spoticar-choose-concession-modal" id="spoticar-choose-concession-modal" style="display:none;">
+  <div class="spoticar-choose-concession-content">
+    <button class="spoticar-modal-close" id="close-spoticar-choose-concession">×</button>
+    <h3>Choisissez votre concession</h3>
+    <p>Où souhaitez-vous prendre rendez-vous ?</p>
+    <div class="spoticar-modal-actions">
+      <a href="tel:0490133000" class="spoticar-btn-service">Avignon</a>
+      <a href="tel:0490911271" class="spoticar-btn-service">Tarascon</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= PIÈCES ================= -->
+
+<section class="spoticar-service-section" id="spoticar-pieces">
+  <div class="spoticar-service-content reverse">
+    <div class="spoticar-service-text">
+      <h2>Pièces de rechange</h2><h3> Qualité & Fiabilité</h3><br>
+      <p>
+        Offrez à votre voiture la qualité et la fiabilité Citroën.
+        Nos pièces d’origine sont conçues pour garantir sécurité, longévité et performance.
+      </p>
+      <ul>
+        <li>Qualité et fiabilité garanties</li>
+        <li>Disponibilité rapide pour ne pas immobiliser votre véhicule</li>
+        <li>Promotions régulières sur consommables</li>
+        <li>Accessoires pour personnaliser votre véhicule</li>
+      </ul>
+      <a href="tel:0490133008" class="spoticar-btn-service">
+        Découvrir nos offres
+      </a>
+    </div>
+
+    <div class="spoticar-service-image">
+      <img src="images/PR.svg" alt="Pièces Citroën">
+    </div>
+  </div>
+</section>
+
+<!-- ================= RENT ================= -->
+
+<section class="spoticar-service-section" id="spoticar-rent">
+  <div class="spoticar-service-content">
+    <div class="spoticar-service-text">
+      <h2>Free2Move Rent</h2><h3> Location simplifiée </h3><br>
+      <p>
+        Louez un véhicule Citroën ou DS Automobiles en toute simplicité.
+        Idéal pour remplacer temporairement votre voiture, profiter d’un
+        véhicule plus grand pour un week-end ou tester un modèle récent.
+      </p>
+      <ul>
+        <li>Large choix de véhicules particuliers</li>
+        <li>Réservation simple et rapide en ligne ou en agence</li>
+        <li>Tarifs avantageux et offres spéciales pour les clients particuliers</li>
+      </ul>
+      <a href="tel:0490133796" id="open-spoticar-rent" class="spoticar-btn-service">
+        Réserver votre véhicule
+      </a>
+    </div>
+
+    <div class="spoticar-service-image">
+      <img src="images/rent.svg" alt="Free2Move Rent">
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= BLOC CONCESSIONS CITROËN ================= -->
+<section class="spoticar-services">
+  <div class="spoticar-services-inner">
+    <span class="spoticar-eyebrow">Accédez rapidement à votre concession</span>
+    <h2 class="spoticar-service-title">Avignon ou Tarascon, toutes les informations en un clic</h2>
+  </div>
+</section>
+
+<section class="spoticar-quick-concessions">
+  <div class="container">
+    <div class="cards">
+      <div class="card" id="spoticar-card-avignon">
+        <h3>MIDI AUTO 84</h3>
+        <p class="city">AVIGNON</p>
+        <a href="#" class="cta spoticar-open-modal" data-target="spoticar-modal-avignon">Voir les informations →</a>
+      </div>
+      <div class="card" id="spoticar-card-tarascon">
+        <h3>MIDI AUTO 84</h3>
+        <p class="city">TARASCON</p>
+        <a href="#" class="cta spoticar-open-modal" data-target="spoticar-modal-tarascon">Voir les informations →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODALE AVIGNON CITROËN ================= -->
+<div id="spoticar-modal-avignon" class="spoticar-modal-avignon">
+  <button id="spoticar-close-modal-avignon" class="spoticar-modal-close">×</button>
+  <div class="spoticar-modal-content">
+    <div id="spoticar-map-avignon" class="spoticar-modal-map"></div>
+    <div class="spoticar-modal-info">
+      <div class="spoticar-modal-info-header">
+        <div class="spoticar-modal-info-title">
+          <h2>MIDI AUTO 84 <br> AVIGNON</h2>
+        </div>
+      </div>
+      <div class="spoticar-modal-info-content">
+        <div class="spoticar-modal-info-list">
+          <div class="spoticar-modal-info-item">
+            <img src="images/location-marker.24d85708.svg" alt="Adresse">
+            <div><strong>Adresse</strong><p>350 Avenue Charles Valente<br>84140 Montfavet</p></div>
+          </div>
+          <div class="spoticar-modal-info-item">
+            <img src="images/location-phone.9890c7bd.svg" alt="Téléphone">
+            <div><strong>Téléphone</strong><p>04 90 13 30 00</p></div>
+          </div>
+        </div>
+        <div class="spoticar-modal-services">
+          <h3><br>SERVICES DISPONIBLES</h3>
+          <div class="spoticar-services-grid">
+            <a href="#" class="spoticar-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/passengercarsales.c2d7e7ac.svg"><div>Vente de véhicules neufs</div></a>
+            <a href="#" class="spoticar-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/usedcars.69fc791a.svg"><div>Vente de véhicules d'occasion</div></a>
+            <a href="#" class="spoticar-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/service.6f9e0a4a.svg"><div>Après-vente</div></a>
+            <a href="#" class="spoticar-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/parts.d2853218.svg"><div>Pièces de rechange</div></a>
+            <a href="#" class="spoticar-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/lcvSales.e055d512.svg"><div>LCV Sales</div></a>
+          </div>
+        </div>
+        <a href="tel:0490133000" class="spoticar-modal-btn-call">Nous Contacter</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODALE TARASCON CITROËN ================= -->
+<div id="spoticar-modal-tarascon" class="spoticar-modal-tarascon">
+  <button id="spoticar-close-modal-tarascon" class="spoticar-modal-close">×</button>
+  <div class="spoticar-modal-content">
+    <div id="spoticar-map-tarascon" class="spoticar-modal-map"></div>
+    <div class="spoticar-modal-info">
+      <div class="spoticar-modal-info-header">
+        <div class="spoticar-modal-info-title">
+          <h2>MIDI AUTO 84 <br> TARASCON</h2>
+        </div>
+      </div>
+      <div class="spoticar-modal-info-content">
+        <div class="spoticar-modal-info-list">
+          <div class="spoticar-modal-info-item">
+            <img src="images/location-marker.24d85708.svg" alt="Adresse">
+            <div><strong>Adresse</strong><p>8 Boulevard Gambetta <br>13150 Tarascon</p></div>
+          </div>
+          <div class="spoticar-modal-info-item">
+            <img src="images/location-phone.9890c7bd.svg" alt="Téléphone">
+            <div><strong>Téléphone</strong><p>04 90 91 12 71</p></div>
+          </div>
+        </div>
+        <div class="spoticar-modal-services">
+          <h3><br>SERVICES DISPONIBLES</h3>
+          <div class="spoticar-services-grid">
+            <a href="#" class="spoticar-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/passengercarsales.c2d7e7ac.svg"><div>Vente de véhicules neufs</div></a>
+            <a href="#" class="spoticar-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/usedcars.69fc791a.svg"><div>Vente de véhicules d'occasion</div></a>
+            <a href="#" class="spoticar-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/service.6f9e0a4a.svg"><div>Après-vente</div></a>
+            <a href="#" class="spoticar-service-card"><img src="https://prod-dot-carussel-dwt.appspot.com/lcvSales.e055d512.svg"><div>LCV Sales</div></a>
+          </div>
+        </div>
+        <a href="tel:0490911271" class="spoticar-modal-btn-call">Nous contacter</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="spoticar-choose-concession-modal" id="spoticar-choose-concession-modal" style="display:none;">
+  <div class="spoticar-choose-concession-content">
+    <button class="spoticar-modal-close" id="spoticar-close-choose-concession">×</button>
+    <h3>Choisissez votre concession</h3>
+    <p>Où souhaitez-vous prendre rendez-vous ?</p>
+    <div class="spoticar-modal-actions">
+      <a href="https://www.spoticar.fr/services/rendez-vous?concession=avignon" class="spoticar-modal-btn">Avignon</a>
+      <a href="https://www.spoticar.fr/services/rendez-vous?concession=tarascon" class="spoticar-modal-btn">Tarascon</a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- RÉSEAUX SOCIAUX SPOTICAR -->
 <section class="spoticar-page-social">
   <div class="spoticar-page-social-wrapper">
     <div class="spoticar-page-social-content">
-      <h3>Suivez-nous</h3>
+     <span class="spoticar-eyebrow">Restez connectés</span>
+      <h3>Suivez nos réseaux sociaux</h3>
       <p>
         Retrouvez l’actualité de Midi Auto 84, les conseils d’entretien, les nouveautés
         Spoticar et la vie de la concession sur nos réseaux sociaux.
@@ -99,10 +494,11 @@
 </section>
 
 
-    </main>
-
-   <!-- FOOTER -->
-<footer>
+  </div>
+</section>
+</main>
+  <!-- FOOTER -->
+<footer class="footer-spoticar">
   <div class="footer-inner">
     <!-- Infos existantes empilées verticalement -->
     <div class="footer-info">
@@ -130,5 +526,182 @@
     </ul>
   </div>
 </div>
+
+<script>
+/* ===== HERO GRADIENT ===== */
+function updateHerospoticarGradient() {
+  const heroBg = document.querySelector('.hero-bg-spoticar');
+  if (!heroBg) return;
+
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const percent = Math.min(Math.max(scrollTop / docHeight, 0), 1);
+
+  const opacity = 1 - percent * 0.3;
+
+  heroBg.style.background = `
+    linear-gradient(
+      to bottom,
+      rgba(0, 45, 60, 1),
+  rgba(0, 110, 144, 1),
+  rgba(96, 166, 190, 1),
+  rgba(255, 255, 255, 1)
+    )
+  `;
+}
+
+window.addEventListener('load', updateHerospoticarGradient);
+window.addEventListener('scroll', updateHerospoticarGradient);
+
+
+  if (window.innerWidth <= 420) {
+    document.querySelectorAll('.typewriter-h1, .typewriter-h2').forEach(el => {
+      el.classList.remove('typewriter-h1', 'typewriter-h2');
+      el.style.width = 'auto';
+      el.style.whiteSpace = 'normal';
+      el.style.animation = 'none';
+    });
+  }
+
+
+
+/* ===== MODALES HERO ===== */
+const btnContactHero = document.getElementById('open-contact-modal');
+const contactModal = document.getElementById('contact-modal');
+const closeContact = document.getElementById('close-contact-modal');
+
+if (btnContactHero && contactModal && closeContact) {
+  btnContactHero.addEventListener('click', e => {
+    e.preventDefault();
+    contactModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeContact.addEventListener('click', () => {
+    contactModal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  });
+
+  contactModal.addEventListener('click', e => {
+    if (e.target === contactModal) {
+      contactModal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+
+  // ===== MODALE CHOIX CONCESSION CITROËN =====
+  const openChooseConcession = document.getElementById('open-spoticar-choose-concession');
+  const chooseModal = document.getElementById('spoticar-choose-concession-modal');
+  const closeChoose = document.getElementById('spoticar-close-choose-concession');
+
+  if (openChooseConcession && chooseModal && closeChoose) {
+    openChooseConcession.addEventListener('click', function(e) {
+      e.preventDefault();
+      chooseModal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeChoose.addEventListener('click', function() {
+      chooseModal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+
+    chooseModal.addEventListener('click', function(e) {
+      if (e.target === chooseModal) {
+        chooseModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+  }
+
+  // ===== MODALES AVIGNON / TARASCON =====
+  const openBtns = document.querySelectorAll('.spoticar-open-modal');
+
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.dataset.target;
+      const modal = document.getElementById(targetId);
+      if (!modal) return;
+
+      // n’ouvre la modale que sur clic
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+
+      // Initialiser la map seulement si pas encore faite
+      const mapDiv = modal.querySelector('.spoticar-modal-map');
+      if (mapDiv && !mapDiv.dataset.mapInit) {
+        let pos;
+        if (targetId.includes('avignon')) pos = { lat: 43.919102, lng: 4.872694 };
+        if (targetId.includes('tarascon')) pos = { lat: 43.8056, lng: 4.6606 };
+
+        if (pos) {
+          const map = new google.maps.Map(mapDiv, {
+            center: pos,
+            zoom: 15,
+            disableDefaultUI: true
+          });
+
+          new google.maps.Marker({
+            position: pos,
+            map: map,
+            title: targetId.toUpperCase()
+          });
+
+          map.addListener('click', () => {
+            window.open(`https://www.google.com/maps/dir/?api=1&destination=${pos.lat},${pos.lng}`, '_blank');
+          });
+
+          mapDiv.dataset.mapInit = true;
+        }
+      }
+    });
+  });
+
+  // ===== FERMETURE DES MODALES =====
+  const closeBtns = document.querySelectorAll('.spoticar-modal-close');
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      const modal = this.closest('.spoticar-modal-avignon, .spoticar-modal-tarascon, #spoticar-choose-concession-modal');
+      if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+  });
+
+  // ===== CLIC SUR L'OVERLAY =====
+  const modals = document.querySelectorAll('.spoticar-modal-avignon, .spoticar-modal-tarascon, #spoticar-choose-concession-modal');
+  modals.forEach(modal => {
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+  });
+
+});
+</script>
+
+<script>
+const toggle = document.querySelector('.spoticar-menu-toggle');
+const nav = document.querySelector('.spoticar-header-nav');
+
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+
+
+</script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfxIjFwIWiOh-xS1kk9ocv9yyb-sT-m6Q&language=fr" defer></script>
+
 </body>
 </html>
